@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="json-simple" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="org.junit.contrib:junit-theories:5.0-alpha-3" level="project" />
   </component>
 </module>

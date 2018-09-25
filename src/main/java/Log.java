@@ -1,11 +1,12 @@
-import java.text.DateFormat;
-
-public class Log {
-    public DateFormat datetime;
+class Log {
+    public String startDate;
     public String record;
+    public String endDate;
 
-    public Log(DateFormat datetime, String record) {
-        this.datetime = datetime;
+
+    Log(String startDate, String endDate, String record) {
+        this.startDate = startDate;
         this.record = record;
+        this.endDate = endDate;
     }
 }
