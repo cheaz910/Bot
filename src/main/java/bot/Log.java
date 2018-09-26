@@ -1,3 +1,5 @@
+package bot;
+
 class Log {
     public String startDate;
     public String record;

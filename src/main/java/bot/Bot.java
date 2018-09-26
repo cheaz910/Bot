@@ -1,5 +1,6 @@
-
+package bot;
 import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -9,8 +10,10 @@ import com.google.gson.Gson;
 class Bot {
     private String NameOfUser = "";
 
-    void Start(){
+    void Start() {
         NameOfUser = GetName();
+        // Ключ внешнего Map - имя пользователя
+        // Ключ внутреннего Map - время и дата события
         Map<String, Map<String, Log>> log = ConvertToMap(FileWorker.ReadFile("Log.txt"));
         if (log == null)
             log = new HashMap<>();
@@ -86,7 +89,7 @@ class Bot {
             return;
         }
         String oldDate = info[0];
-        String newDate = info[1];
+        String newDate = info[2];
         Log note = log.get(oldDate);
         log.remove(oldDate);
         if (log.containsKey(newDate))
