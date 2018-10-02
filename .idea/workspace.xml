@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bot/MyMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bot.iml" afterDir="false" />
+    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="Добавлен класс MyMap и доделан метод поиска конфликтов">
+      <change afterPath="$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/Log.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/FileWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/FileWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Bot/bot/BotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Bot/bot/BotTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,29 +43,29 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="8" />
-          <entry key="txt" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="21" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="8" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="21" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12326" />
+          <entry key="java" value="12722" />
           <entry key="txt" value="147" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12326" />
+          <entry key="JAVA" value="12722" />
           <entry key="PLAIN_TEXT" value="147" />
           <entry key="XML" value="24" />
         </counts>
@@ -80,19 +77,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="75">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="1336">
+              <caret line="220" column="51" lean-forward="true" selection-start-line="220" selection-start-column="51" selection-end-line="220" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2954#2955#0" expanded="true" />
+                <element signature="e#3015#3016#0" expanded="true" />
+                <element signature="e#8623#8624#0" expanded="true" />
+                <element signature="e#8683#8684#0" expanded="true" />
+                <element signature="e#8749#8750#0" expanded="true" />
+                <element signature="e#8809#8810#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,20 +104,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/MyMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/internal/LinkedTreeMap.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -122,11 +116,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="286">
+              <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ilnur.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -141,19 +165,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="45">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -180,6 +195,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="a8194b7d777b7228d07eaa4e2cc60c75386be5a3" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -196,8 +216,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Bot.java" />
         <option value="$PROJECT_DIR$/src/test/BotTest.java" />
         <option value="$PROJECT_DIR$/src/test/bot/BotTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" />
       </list>
     </option>
   </component>
@@ -311,18 +334,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
@@ -375,6 +392,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -382,7 +400,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537973036346" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538516570943" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -392,6 +410,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bot" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="bot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -412,7 +433,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BotTest">
     <configuration name="Program" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -430,8 +451,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileWorkerTest.testFileWorker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.FileWorkerTest" />
+      <option name="METHOD_NAME" value="testFileWorker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Program" />
+      <item itemvalue="JUnit.FileWorkerTest.testFileWorker" />
+      <item itemvalue="JUnit.BotTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BotTest" />
+        <item itemvalue="JUnit.FileWorkerTest.testFileWorker" />
         <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
@@ -468,8 +526,20 @@
       <option name="project" value="LOCAL" />
       <updated>1537937487874</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавлены тесты">
+      <created>1538515043001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1538515043001</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FileWorkerTest_testFileWorker - 2018.10.03 at 02h 37m 23s.xml">
+      <configuration name="FileWorkerTest.testFileWorker" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,9 +552,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828768" visible="true" weight="0.1072572" />
-      <window_info id="Structure" order="1" sideWeight="0.5017123" side_tool="true" weight="0.25744048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.10832444" />
+      <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -492,14 +563,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.31049252" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.31049252" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30942184" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4994664" weight="0.32976446" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4994664" weight="0.31905782" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4994664" weight="0.32869378" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -510,34 +581,6 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828768" visible="true" weight="0.19743863" />
-      <window_info id="Structure" order="1" sideWeight="0.5017123" side_tool="true" weight="0.25744048" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.3308351" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30942184" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4994664" weight="0.32976446" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4994664" weight="0.32869378" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -555,11 +598,23 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="LONG_EDGES_VISIBLE" value="true" />
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -592,20 +647,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/MyMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/internal/LinkedTreeMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/MyMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -616,41 +678,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Log.java">
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ilnur.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1336">
+          <caret line="220" column="51" lean-forward="true" selection-start-line="220" selection-start-column="51" selection-end-line="220" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2954#2955#0" expanded="true" />
+            <element signature="e#3015#3016#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8683#8684#0" expanded="true" />
+            <element signature="e#8749#8750#0" expanded="true" />
+            <element signature="e#8809#8810#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="286">
+          <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
