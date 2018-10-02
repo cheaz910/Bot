@@ -73,12 +73,12 @@ class Bot {
         return String.format("Здравствуй, %s!", name);
     }
 
-    private String GetHelp() { //добавить перенос строки
-        return "Чтобы добавить событие, введите: +. " +
-                "Чтобы удалить событие, введите: -. " +
-                "Чтобы перенести событие, введите: перенести. " +
-                "Чтобы посмотреть все события за день, введите: день. " +
-                "Чтобы посмотреть все события за месяц, введите: месяц. " +
+    private String GetHelp() {
+        return "Чтобы добавить событие, введите: +. " + "\n" +
+                "Чтобы удалить событие, введите: -. " + "\n" +
+                "Чтобы перенести событие, введите: перенести. " + "\n" +
+                "Чтобы посмотреть все события за день, введите: день. " + "\n" +
+                "Чтобы посмотреть все события за месяц, введите: месяц. " + "\n" +
                 "Чтобы завершить работу, введите: спасибо. ";
     }
 
@@ -95,10 +95,10 @@ class Bot {
         }
         Date endDate = GetEndDate(startDate, duration);
         Log newLog = new Log(info[0], startDate, endDate);
-        //if (IsConflict(notes, newLog)) {             если это раскомментить оно сломается
-        //    System.out.println("На это время уже запланировано событие");
-        //    return;
-        //}
+        if (IsConflict(notes, newLog)) {
+            System.out.println("На это время уже запланировано событие");
+            return;
+        }
         notes.put(strStartDate, newLog);
         System.out.println("Событие добавлено");
     }
@@ -145,13 +145,21 @@ class Bot {
         if (oldDate == null || newDate == null) {
             return;
         }
-        // пересчёт конечной даты
-        Log note = notes.get(strOldDate);
+        String note = notes.get(strOldDate).note;
+        Date endDate = RecalculateEndDate(oldDate, notes.get(strOldDate).endDate, newDate);
         notes.remove(strOldDate);
-        notes.put(strNewDate, note);
+        Log log = new Log(note, newDate, endDate);
+        notes.put(strNewDate, log);
         System.out.println("Событие перенесено");
     }
 
+    private Date RecalculateEndDate(Date startOldDate, Date endOldDate, Date startNewDate) {
+        int diffInMinutes = (int)((endOldDate.getTime() - startOldDate.getTime()) / (1000 * 60));
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(startNewDate);
+        cal.add(Calendar.MINUTE, diffInMinutes);
+        return cal.getTime();
+    }
 
     private ArrayList<Log> GetNotes(String strMonthOrDay, Map<String, Log> log, String pattern) {
         Date needDate = GetCorrectDate(strMonthOrDay, pattern);
