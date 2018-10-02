@@ -1,7 +1,5 @@
 package bot;
 
-import bot.Log;
-
 import java.util.HashMap;
 import java.util.Map;
 

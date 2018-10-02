@@ -1,137 +1,195 @@
 package bot;
 import java.text.ParseException;
-
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 import com.google.gson.Gson;
-
 
 class Bot {
     private String NameOfUser = "";
 
     void Start() {
         NameOfUser = GetName();
-        // Ключ внешнего Map - имя пользователя
-        // Ключ внутреннего Map - время и дата события
+
         Map<String, Map<String, Log>> log = ConvertToMap(FileWorker.ReadFile("Log.txt"));
         if (log == null)
             log = new HashMap<>();
         if (!log.containsKey(NameOfUser))
             log.put(NameOfUser, new HashMap());
+
         System.out.println(GetGreeting(NameOfUser));
-        String command = "";
+        System.out.println(GetHelp());
+
         Scanner in = new Scanner(System.in);
-        while (!"Пока".equals(command)) {
-            command = in.nextLine();
-            if (command.startsWith("Добавь событие ")) {
-                AddNote(command.substring(15), log);
-                System.out.println("Событие добавлено");
+        boolean isCommand = true;
+        while (isCommand) {
+            switch(in.nextLine()) {
+                case "+":
+                    System.out.println("Введите через пробел событие, дату начала и продолжительность события. " +
+                            "Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm");
+                    AddNote(in.nextLine().split(" "), log.get(NameOfUser));
+                    break;
+                case "-":
+                    System.out.println("Введите дату начала события. " +
+                            "Формат ввода: HH:mm-dd.MM.yyyy");
+                    RemoveNote(in.nextLine(), log.get(NameOfUser));
+                    break;
+                case "перенести":
+                    System.out.println("Введите сначала дату, с которой нужно перенести, " +
+                            "затем дату, на которую нужно перенести. " +
+                            "Формат ввода: HH:mm-dd.MM.yyyy HH:mm-dd.MM.yyyy");
+                    TransferNote(in.nextLine().split(" "), log.get(NameOfUser));
+                    break;
+                case "день":
+                    System.out.println("Ведите интересующий вас день. " +
+                            "Формат ввода: dd.MM.yyyy");
+                    ArrayList<Log> notesForDay = GetNotes(in.nextLine(), log.get(NameOfUser), "dd.MM.yyyy");
+                    DisplayListOfNotes(notesForDay, "HH:mm-dd.MM.yyyy");
+                    break;
+                case "месяц":
+                    System.out.println("Введите интересующий вас месяц. " +
+                            "Формат ввода: MM.yyyy");
+                    ArrayList<Log> notesForMonth = GetNotes(in.nextLine(), log.get(NameOfUser), "MM.yyyy");
+                    DisplayListOfNotes(notesForMonth, "HH:mm-dd.MM.yyyy");
+                    break;
+                case "спасибо":
+                    isCommand = false;
+                    break;
+                default:
+                    System.out.println("Неизвестная команда");
+                    GetHelp();
+                    break;
             }
-            else if (command.startsWith("Покажи список событий за месяц ")) {
-                ArrayList<String> result = GetNotes(command.substring(32),
-                        log.get(NameOfUser),
-                        "MM.yyyy");
-                System.out.println(result);
-            }
-            else if (command.startsWith("Покажи список событий ")) {
-                ArrayList<String> result = GetNotes(command.substring(22),
-                                                    log.get(NameOfUser),
-                                                    "dd.MM.yyyy");
-                System.out.println(result);
-            }
-            else if (command.startsWith("Перенеси событие с ")) {
-                TransferNote(command, log.get(NameOfUser));
-                System.out.println("Событие перенесено");
-            }
-            else if (command.startsWith("Конфликты?")) {
-                 ArrayList<String> conflicts = GetConflicts(log.get(NameOfUser));
-                 System.out.println("Обнаруженнные конфликты:");
-                 for (String conflict : conflicts) {
-                     System.out.println(conflict);
-                 }
-            }
-            else
-                System.out.println("Неизвестная команда");
         }
         FileWorker.WriteFile("Log.txt", ConvertToJson(log));
     }
 
-    private ArrayList<String> GetConflicts(Map<String, Log> log) {
-        ArrayList<String> result = new ArrayList<>();
-        ArrayList<String> stringDates = new ArrayList<>(log.keySet());
-        Date[] dates = new Date[stringDates.size()];
-        Date[] endsDates = new Date[stringDates.size()];
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm-dd.MM.yyyy");
-        for (int i = 0; i < stringDates.size(); i++) {
-            try {
-                dates[i] = format.parse(stringDates.get(i));
-                endsDates[i] = format.parse(log.get(stringDates.get(i)).endDate);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-        }
-        for (int i = 0; i < dates.length; i++) {
-            for (int j = i + 1; j < dates.length; j++) {
-                if (dates[i].before(dates[j]) && endsDates[i].after(dates[j]) ||
-                    dates[i].after(dates[j]) && dates[i].before(endsDates[j]))
-                    result.add(format.format(dates[i]) + "--" + format.format(endsDates[i]) +
-                            " и " + format.format(dates[j]) + "--" + format.format(endsDates[j]));
-            }
-        }
-        return result;
+    private String GetName() {
+        System.out.println("Как вас зовут?");
+        Scanner in = new Scanner(System.in);
+        return in.nextLine();
     }
 
-    private void TransferNote(String command, Map<String, Log> log) {
-        String[] info = command.split(" ");
-        if (info.length != 2) {
-            System.out.println("Неверный формат данных. Пример: 'Перенеси событие с Х на Y'");
+    private String GetGreeting(String name) {
+        return String.format("Здравствуй, %s!", name);
+    }
+
+    private String GetHelp() { //добавить перенос строки
+        return "Чтобы добавить событие, введите: +. " +
+                "Чтобы удалить событие, введите: -. " +
+                "Чтобы перенести событие, введите: перенести. " +
+                "Чтобы посмотреть все события за день, введите: день. " +
+                "Чтобы посмотреть все события за месяц, введите: месяц. " +
+                "Чтобы завершить работу, введите: спасибо. ";
+    }
+
+    private void AddNote(String[] info, Map<String, Log> notes) {
+        if (info.length != 3){
+            System.out.println("Неверный формат ввода");
             return;
         }
-        String oldDate = info[0];
-        String newDate = info[2];
-        Log note = log.get(oldDate);
-        log.remove(oldDate);
-        if (log.containsKey(newDate))
-            System.out.println("Данное время уже занято");
-        else
-            log.put(newDate, note);
+        String strStartDate = info[1];
+        Date startDate = GetCorrectDate(strStartDate, "HH:mm-dd.MM.yyyy");
+        Date duration = GetCorrectDate(info[2], "HH:mm");
+        if (startDate == null || duration == null) {
+            return;
+        }
+        Date endDate = GetEndDate(startDate, duration);
+        Log newLog = new Log(info[0], startDate, endDate);
+        //if (IsConflict(notes, newLog)) {             если это раскомментить оно сломается
+        //    System.out.println("На это время уже запланировано событие");
+        //    return;
+        //}
+        notes.put(strStartDate, newLog);
+        System.out.println("Событие добавлено");
     }
 
-    // Получить все записи за месяц или за день(зависит от pattern)
-    private ArrayList<String> GetNotes(String command,
-                                       Map<String, Log> log,
-                                       String pattern) {
-        SimpleDateFormat formatWithTime = new SimpleDateFormat("HH:mm-dd.MM.yyyy", Locale.getDefault());
-        SimpleDateFormat format = new SimpleDateFormat(pattern);
-        ArrayList<String> result = new ArrayList<>();
-        try {
-            Date needDate = format.parse(command);
-            for (String date : log.keySet()) {
-                Date currentDate = formatWithTime.parse(date);
-                if (needDate.getYear() == currentDate.getYear() &&
-                        needDate.getMonth() == currentDate.getMonth() &&
-                        (needDate.getDay() == currentDate.getDay() || pattern.equals("MM.yyyy"))) {
-                    result.add(date);
-                }
+    private Date GetEndDate(Date startDate, Date duration) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(startDate);
+        cal.add(Calendar.MINUTE, duration.getHours() * 60 + duration.getMinutes());
+        return cal.getTime();
+    }
+
+    private boolean IsConflict(Map<String, Log> notes, Log newLog) {
+        for (Log log : notes.values()) {
+            if (DoNotesIntersect(log, newLog)){
+                return true;
             }
-        } catch (ParseException e) {
-            System.out.println("Неверный формат даты/времени. [" + pattern + "]");
+        }
+        return false;
+    }
+
+    private boolean DoNotesIntersect(Log first, Log second) {
+        return !((first.startDate.after(second.startDate) && first.endDate.after(second.endDate)) ||
+                (first.startDate.before(second.startDate) && first.endDate.before(second.endDate)));
+    }
+
+    private void RemoveNote(String strDate, Map<String, Log> notes) {
+        Date date = GetCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
+        if (date == null) {
+            return;
+        }
+        notes.remove(strDate);
+        System.out.println("Событие удалено");
+    }
+
+    private void TransferNote(String[] info, Map<String, Log> notes) {
+        if (info.length != 2){
+            System.out.println("Неверный формат ввода");
+            return;
+        }
+        String strOldDate = info[0];
+        String strNewDate = info[1];
+        Date oldDate = GetCorrectDate(strOldDate, "HH:mm-dd.MM.yyyy");
+        Date newDate = GetCorrectDate(strNewDate, "HH:mm-dd.MM.yyyy");
+        if (oldDate == null || newDate == null) {
+            return;
+        }
+        // пересчёт конечной даты
+        Log note = notes.get(strOldDate);
+        notes.remove(strOldDate);
+        notes.put(strNewDate, note);
+        System.out.println("Событие перенесено");
+    }
+
+
+    private ArrayList<Log> GetNotes(String strMonthOrDay, Map<String, Log> log, String pattern) {
+        Date needDate = GetCorrectDate(strMonthOrDay, pattern);
+        if (needDate == null) {
+            return null;
+        }
+        ArrayList<Log> result = new ArrayList<>();
+        for (String date : log.keySet()) {
+            Date currentDate = log.get(date).startDate;
+            if (needDate.getYear() == currentDate.getYear() &&
+                    needDate.getMonth() == currentDate.getMonth() &&
+                    (needDate.getDay() == currentDate.getDay() || pattern.equals("MM.yyyy"))) {
+                result.add(log.get(date));
+            }
         }
         return result;
     }
 
-    private void AddNote(String command, Map<String, Map<String, Log>> log) {
-        final String[] info = command.split(" "); // массив состоящий из: даты начала, даты конца и события
-        Map<String, Log> notes = log.get(NameOfUser);
-        if (notes != null) {
-            if (notes.containsKey(info[0]))
-                System.out.println("Данное время уже занято");
-            else {
-                String note = command.substring(info[0].length() + info[1].length() + 1);
-                notes.put(info[0], new Log(info[0], info[1], note));
-            }
+    private void DisplayListOfNotes(ArrayList<Log> notes, String pattern) {
+        SimpleDateFormat format = new SimpleDateFormat(pattern, Locale.getDefault());
+        for (Log log : notes) {
+            System.out.println("Начало события: " + format.format(log.startDate) +
+                    " Конец события: " + format.format(log.endDate) +
+                    " Cобытие: " + log.note);
         }
+    }
+
+    private Date GetCorrectDate(String strDate, String pattern) {
+        SimpleDateFormat format = new SimpleDateFormat(pattern, Locale.getDefault());
+        Date date;
+        try {
+            date = format.parse(strDate);
+        }
+        catch (ParseException e) {
+            System.out.println("Неверный формат даты/времени. [" + strDate + "]");
+            return null;
+        }
+        return date;
     }
 
     private String ConvertToJson(Map<String, Map<String, Log>> log) {
@@ -140,17 +198,5 @@ class Bot {
 
     private HashMap<String, Map<String, Log>> ConvertToMap(String log) {
         return new Gson().fromJson(log, MyMap.class);
-    }
-
-    private String GetName() {
-        System.out.println("Как вас зовут?");
-        String name;
-        Scanner in = new Scanner(System.in);
-        name = in.nextLine();
-        return name;
-    }
-
-    private String GetGreeting(String name) {
-        return String.format("Привет, %s!", name);
     }
 }

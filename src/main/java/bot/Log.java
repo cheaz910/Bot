@@ -1,14 +1,14 @@
 package bot;
+import java.util.*;
 
 class Log {
-    public String startDate;
-    public String record;
-    public String endDate;
+    public String note;
+    public Date startDate;
+    public Date endDate;
 
-
-    Log(String startDate, String endDate, String record) {
+    Log(String note, Date startDate, Date endDate) {
+        this.note = note;
         this.startDate = startDate;
-        this.record = record;
         this.endDate = endDate;
     }
 }
