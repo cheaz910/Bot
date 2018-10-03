@@ -121,7 +121,7 @@ public class BotTest {
     }
 
     @Test
-    public final void testRemoveNote_NotExist() { // Удаление существующего события
+    public final void testRemoveNote_NotExist() { // Удаление не существующего события
         Bot bot = new Bot();
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
@@ -186,7 +186,6 @@ public class BotTest {
         Date endDate = bot.RecalculateEndDate(startOldDate, endOldDate, startDate);
         assertEquals(2019, endDate.getYear());
         assertEquals(10, endDate.getMonth());
-        System.out.println(endDate);
         assertEquals(3, endDate.getDate());
         assertEquals(17, endDate.getHours());
         assertEquals(50, endDate.getMinutes());

@@ -155,9 +155,13 @@ class Bot {
         }
         String note = notes.get(strOldDate).note;
         Date endDate = RecalculateEndDate(oldDate, notes.get(strOldDate).endDate, newDate);
+        Log newLog = new Log(note, newDate, endDate);
+        if (IsConflict(notes, newLog)) {
+            System.out.println("На это время уже запланировано событие");
+            return;
+        }
         notes.remove(strOldDate);
-        Log log = new Log(note, newDate, endDate);
-        notes.put(strNewDate, log);
+        notes.put(strNewDate, newLog);
         System.out.println("Событие перенесено");
     }
 
@@ -187,10 +191,10 @@ class Bot {
     }
 
     private void DisplayListOfNotes(ArrayList<Log> notes) {
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm-dd.MM.yyyy", Locale.getDefault());
+        String pattern = "HH:mm-dd.MM.yyyy";
         for (Log log : notes) {
-            System.out.println("Начало события: " + format.format(log.startDate) +
-                    " Конец события: " + format.format(log.endDate) +
+            System.out.println("Начало события: " + GetCorrectStringFromDate(log.startDate, pattern) +
+                    " Конец события: " + GetCorrectStringFromDate(log.endDate, pattern) +
                     " Cобытие: " + log.note);
         }
     }
