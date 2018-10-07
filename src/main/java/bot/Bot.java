@@ -1,4 +1,5 @@
 package bot;
+import java.io.PrintStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -150,7 +151,6 @@ class Bot {
         Date oldDate = GetCorrectDate(strOldDate, "HH:mm-dd.MM.yyyy");
         Date newDate = GetCorrectDate(strNewDate, "HH:mm-dd.MM.yyyy");
         if (oldDate == null || newDate == null) {
-            System.out.println("Неверный формат ввода");
             return;
         }
         String note = notes.get(strOldDate).note;
