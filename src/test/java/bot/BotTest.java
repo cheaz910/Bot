@@ -2,14 +2,32 @@ package bot;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BotTest {
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOutputStream = System.out;
+
+    @Before
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @After
+    public void cleanUpStreams() {
+        System.setOut(originalOutputStream);
+    }
+
     @Test
     public final void testGetGreeting() {
         Bot bot = new Bot();
@@ -26,6 +44,7 @@ public class BotTest {
         Log log = notes.get("13:40-02.09.2018");
         assertEquals(log.note, "событие");
         String pattern = "HH:mm-dd.MM.yyyy";
+        assertEquals("Событие добавлено\n", outContent.toString());
         assertEquals(bot.GetCorrectDate("13:40-02.09.2018", pattern), log.startDate);
         assertEquals(bot.GetCorrectDate("01:50-03.09.2018", pattern), log.endDate);
     }
@@ -40,10 +59,19 @@ public class BotTest {
     @Test
     public final void testAddNote_WrongFormat() {
         assertTrue(WrongFormatAddNote("событие 13:40-02.09.2018")); // На входе не указывается продолжительность
+        assertEquals("Неверный формат ввода\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatAddNote("событие")); // На входе не указывается начало и продолжительность
+        assertEquals("Неверный формат ввода\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatAddNote("")); // На входе пустая строка
+        assertEquals("Неверный формат ввода\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatAddNote("событие 11340-02.09.2018 01:30")); // На входе начало в неправильном формате
+        assertEquals("Неверный формат даты/времени. [11340-02.09.2018]\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatAddNote("событие 13:40-02.09.2018 11330")); // На входе продолжительность в неправильном формате
+        assertEquals("Неверный формат даты/времени. [11330]\n", outContent.toString());
     }
 
     @Test
@@ -56,6 +84,7 @@ public class BotTest {
         Log log = notes.get("01:40-03.09.2018");
         assertEquals(log.note, "событие");
         String pattern = "HH:mm-dd.MM.yyyy";
+        assertEquals("Событие добавлено\n", outContent.toString());
         assertEquals(bot.GetCorrectDate("01:40-03.09.2018", pattern), log.startDate);
         assertEquals(bot.GetCorrectDate("02:50-03.09.2018", pattern), log.endDate);
     }
@@ -72,23 +101,27 @@ public class BotTest {
     @Test
     public final void testIsConflict_NoIntersection() { // Два события не пересекаются
         assertEquals(2, GetNotesAfterAdding("событие2 12:10-02.09.2018 1:10").size());
+        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
     }
 
 
     @Test
     public final void testIsConflict_OneIntersection() { // События пересекаются в одной точке
         assertEquals(1, GetNotesAfterAdding("событие2 12:10-02.09.2018 1:30").size());
+        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
     }
 
 
     @Test
     public final void testIsConflict_Intersection1() { // Конец одного события находится в промежутке другого события
         assertEquals(1, GetNotesAfterAdding("событие2 12:10-02.09.2018 01:35").size());
+        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
     }
 
     @Test
     public final void testIsConflict_Nesting() { // Одно событие находится в промежутке другого события
         assertEquals(1, GetNotesAfterAdding("событие2 13:45-02.09.2018 00:30").size());
+        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
     }
 
     @Test
@@ -117,6 +150,7 @@ public class BotTest {
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:40-02.09.2018", notes);
+        assertEquals("Событие удалено\n", outContent.toString());
         assertEquals(0, notes.size());
     }
 
@@ -126,6 +160,7 @@ public class BotTest {
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:45-02.09.2018", notes);
+        assertEquals("Такого события нет\n", outContent.toString());
         assertEquals(1, notes.size());
     }
 
@@ -135,6 +170,7 @@ public class BotTest {
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:45123--1231202.09.2018", notes);
+        assertEquals("Такого события нет\n", outContent.toString());
         assertEquals(1, notes.size());
     }
 
@@ -144,9 +180,12 @@ public class BotTest {
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         bot.AddNote(command.split(" "), notes);
+        assertEquals("Событие добавлено\n", outContent.toString());
         String note = notes.get("13:40-02.09.2018").note;
         String secondCommand = "13:40-02.09.2018 15:25-03.10.2019";
+        outContent.reset();
         bot.TransferNote(secondCommand.split(" "), notes);
+        assertEquals("Событие перенесено\n", outContent.toString());
         assertTrue(notes.containsKey("15:25-03.10.2019"));
         assertEquals(1, notes.size());
         Log log = notes.get("15:25-03.10.2019");
@@ -161,6 +200,8 @@ public class BotTest {
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         bot.AddNote(command.split(" "), notes);
+        assertEquals("Событие добавлено\n", outContent.toString());
+        outContent.reset();
         bot.TransferNote(secondCommand.split(" "), notes);
         return notes.containsKey("13:40-02.09.2018");
     }
@@ -169,12 +210,19 @@ public class BotTest {
     public final void testTransferNote_WrongFormat() {
         assertTrue(WrongFormatTransferNote("13:40-02.09.2018"));
         // На входе не указывается куда перенести
+        assertEquals("Неверный формат ввода\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatTransferNote(""));
         // На входе пустая строка
+        assertEquals("Неверный формат ввода\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatTransferNote("11340---...-02.09.2018 15:40-03.09.2018"));
         // Первая дата с ошибкой
+        assertEquals("Неверный формат даты/времени. [11340---...-02.09.2018]\n", outContent.toString());
+        outContent.reset();
         assertTrue(WrongFormatTransferNote("13:40-02.09.2018 11330--..32140.1"));
         // Вторая дата с ошибкой
+        assertEquals("Неверный формат даты/времени. [11330--..32140.1]\n", outContent.toString());
     }
 
     @Test
@@ -199,6 +247,7 @@ public class BotTest {
         bot.AddNote(command.split(" "), notes);
         String secondCommand = "событие 10:30-02.11.2018 01:40";
         bot.AddNote(secondCommand.split(" "), notes);
+        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
         ArrayList<Log> listForMonth = bot.GetNotes("11.2018", notes, "MM.yyyy");
         assertEquals(1, listForMonth.size());
         ArrayList<Log> listForDay = bot.GetNotes("02.09.2018", notes, "dd.MM.yyyy");
@@ -213,6 +262,7 @@ public class BotTest {
         bot.AddNote(command.split(" "), notes);
         String secondCommand = "событие 10:30-02.11.2018 01:40";
         bot.AddNote(secondCommand.split(" "), notes);
+        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
         ArrayList<Log> listForMonth = bot.GetNotes("02.11.2018", notes, "MM.yyyy");
         assertEquals(0, listForMonth.size());
     }
@@ -230,6 +280,7 @@ public class BotTest {
         Bot bot = new Bot();
         String strDate = "15:30----юю02.09.2018";
         Date date = bot.GetCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
+        assertEquals("Неверный формат даты/времени. [15:30----юю02.09.2018]\n", outContent.toString());
         assertNull(date);
     }
 
