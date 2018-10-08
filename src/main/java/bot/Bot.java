@@ -1,4 +1,5 @@
 package bot;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,6 +7,13 @@ import java.util.*;
 import com.google.gson.Gson;
 
 class Bot {
+    private Scanner in;
+
+    public Bot(PrintStream outputStream, InputStream inputStream) {
+        System.setOut(outputStream);
+        in = new Scanner(inputStream);
+    }
+
     void Start() {
         String nameOfUser = GetName();
 
@@ -18,7 +26,6 @@ class Bot {
         System.out.println(GetGreeting(nameOfUser));
         System.out.println(GetHelp());
 
-        Scanner in = new Scanner(System.in);
         boolean isCommand = true;
         while (isCommand) {
             switch(in.nextLine()) {
