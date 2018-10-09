@@ -13,15 +13,37 @@ import java.util.Map;
 
 public class BotTest {
     @Test
+    public final void testGetLogForUser_NewUser() { // Новый пользователь, которого еще нет в логе
+        Bot bot = new Bot();
+        Map<String, Map<String, Log>> logAllUsers = new HashMap<>();
+        assertEquals(0, logAllUsers.size());
+        Map<String, Log> log = bot.GetLogForUser("Java", logAllUsers);
+        assertEquals(1, logAllUsers.size());
+        assertEquals(0, log.size());
+    }
+
+    @Test
+    public final void testGetLogForUser_OldUser() { // Пользователь, который уже пользовался ботом
+        Bot bot = new Bot();
+        Map<String, Map<String, Log>> logAllUsers = new HashMap<>();
+        logAllUsers.put("Java", new HashMap());
+        logAllUsers.get("Java").put("<Date>", new Log("<note>", new Date(2018), new Date(2018)));
+        assertEquals(1, logAllUsers.size());
+        Map<String, Log> log = bot.GetLogForUser("Java", logAllUsers);
+        assertEquals(1, logAllUsers.size());
+        assertEquals(1, log.size());
+    }
+
+    @Test
     public final void testGetGreeting() {
-        Bot bot = new Bot(System.out, System.in);
+        Bot bot = new Bot();
         assertThat(bot.GetGreeting("Ильнур"), is("Здравствуй, Ильнур!"));
     }
 
     @Test
     public final void testAddNote_Default() {   // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         bot.AddNote(command.split(" "), notes);
@@ -35,7 +57,7 @@ public class BotTest {
     }
 
     private boolean WrongFormatAddNote(String command, ByteArrayOutputStream outContent) {
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         bot.AddNote(command.split(" "), notes);
         return notes.size() == 0;
@@ -63,7 +85,7 @@ public class BotTest {
     @Test
     public final void testAddNote_BadFormat() { // На входе часы больше 24 (лишние часы должны перейти в дни)
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 25:40-02.09.2018 01:10";
         bot.AddNote(command.split(" "), notes);
@@ -77,7 +99,7 @@ public class BotTest {
     }
 
     private Map<String, Log> GetNotesAfterAdding(String secondCommand, ByteArrayOutputStream outContent) {
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 01:10";
         bot.AddNote(command.split(" "), notes);
@@ -117,8 +139,7 @@ public class BotTest {
 
     @Test
     public final void testGetEndDate_LowDuration() { // Продолжительность до 24 часов
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot();
         Date startDate = new Date(2018, 9,2,13,40);
         Date duration = new Date(0,0,0,2,30);
         Date endDate = bot.GetEndDate(startDate, duration);
@@ -128,8 +149,7 @@ public class BotTest {
 
     @Test
     public final void testGetEndDate_HighDuration() { // Продолжительность больше 24 часов
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot();
         Date startDate = new Date(2018, 9,2,13,40);
         Date duration = new Date(0,0,0,25,30);
         Date endDate = bot.GetEndDate(startDate, duration);
@@ -140,7 +160,7 @@ public class BotTest {
     @Test
     public final void testRemoveNote_Default() { // Удаление существующего события
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:40-02.09.2018", notes);
@@ -151,7 +171,7 @@ public class BotTest {
     @Test
     public final void testRemoveNote_NotExist() { // Удаление не существующего события
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:45-02.09.2018", notes);
@@ -162,7 +182,7 @@ public class BotTest {
     @Test
     public final void testRemoveNote_WrongFormat() { // Неправильный формат даты
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         bot.RemoveNote("13:45123--1231202.09.2018", notes);
@@ -173,7 +193,7 @@ public class BotTest {
     @Test
     public final void testTransferNote_Default() {   // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         bot.AddNote(command.split(" "), notes);
@@ -193,7 +213,7 @@ public class BotTest {
     }
 
     private boolean WrongFormatTransferNote(String secondCommand, ByteArrayOutputStream outContent) {
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         bot.AddNote(command.split(" "), notes);
@@ -225,8 +245,7 @@ public class BotTest {
 
     @Test
     public final void testRecalculateEndDate_Default() { // Стандартные входные данные
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot();
         Date startOldDate = new Date(2018, 9,2,13,40);
         Date endOldDate = new Date(2018, 9, 2, 15,45);
         Date startDate = new Date(2019,10,3,15,45);
@@ -241,7 +260,7 @@ public class BotTest {
     @Test
     public final void testGetNotes_Default() { // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 15:30-02.09.2018 01:40";
         bot.AddNote(command.split(" "), notes);
@@ -257,7 +276,7 @@ public class BotTest {
     @Test
     public final void testGetNotes_WrongPattern() { // Передан день, но шаблон по месяцу
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 15:30-02.09.2018 01:40";
         bot.AddNote(command.split(" "), notes);
@@ -271,16 +290,17 @@ public class BotTest {
     @Test
     public final void testGetCorrectDate_Default() { // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         String strDate = "15:30-02.09.2018";
         Date date = bot.GetCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
         assertEquals(new Date(118, 8, 2, 15, 30), date);
+        assertEquals("", outContent.toString());
     }
 
     @Test
     public final void testGetCorrectDate_WrongFormat() { // Неверный формат даты
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Bot bot = new Bot(new PrintStream(outContent), System.in);
+        Bot bot = new Bot(new PrintStream(outContent));
         String strDate = "15:30----юю02.09.2018";
         Date date = bot.GetCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
         assertEquals("Неверный формат даты/времени. [15:30----юю02.09.2018]\n", outContent.toString());
@@ -289,11 +309,13 @@ public class BotTest {
 
     @Test
     public final void testJsonConverts() { // Проверка перевода из json в map и наоборот
-        Bot bot = new Bot(System.out, System.in);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Map<String, Log>> notes = new HashMap<>();
         notes.put("Ilnur", new HashMap<String, Log>());
         String command = "событие 15:30-02.09.2018 01:40";
         bot.AddNote(command.split(" "), notes.get("Ilnur"));
+        assertEquals("Событие добавлено\n", outContent.toString());
         String json = bot.ConvertToJson(notes);
         Map<String, Map<String, Log>> secondNotes = bot.ConvertToMap(json);
         assertEquals(notes.get("Ilnur").keySet(), secondNotes.get("Ilnur").keySet());
