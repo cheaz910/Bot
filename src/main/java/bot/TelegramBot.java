@@ -17,9 +17,9 @@ class TelegramBot extends TelegramLongPollingBot {
     Bot bot;
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream outputStream = new PrintStream(outContent);
-    PrintStream original = System.out;
+    PrintStream console = System.out;
     HashMap<String, UserInfo> usersInfo = new HashMap<>();
-    private static final Map<String, String> responses = new HashMap<> () {{
+    private static final Map<String, String> responses = new HashMap<String, String> () {{
             put("+", "Введите через пробел событие, дату начала и " +
                     "продолжительность события. Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm");
             put("-", "Введите дату начала события. Формат ввода: HH:mm-dd.MM.yyyy");
@@ -34,7 +34,7 @@ class TelegramBot extends TelegramLongPollingBot {
     public TelegramBot() {
         this.bot = new Bot(outputStream);
         bot.Start();
-        original.println("Бот загрузился");
+        console.println("Бот загрузился");
     }
 
 
@@ -87,7 +87,7 @@ class TelegramBot extends TelegramLongPollingBot {
             return;
         }
 
-        Map<String, Log> log = bot.GetLogForUser(bot.nameOfUser, bot.logAllUsers);
+        Map<String, Log> log = bot.GetLogForUser(chatId, bot.logAllUsers);
         String argument = command;
 
         if (userInfo.stage > 0) {
@@ -115,9 +115,9 @@ class TelegramBot extends TelegramLongPollingBot {
                 }
                 else
                 {
-                    bot.nameOfUser = argument;
+                    userInfo.name = argument;
                     userInfo.stage -= 1;
-                    outputStream.println(bot.GetGreeting(bot.nameOfUser));
+                    outputStream.println(bot.GetGreeting(userInfo.name));
                 }
                 break;
             case "+":
@@ -159,7 +159,7 @@ class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         String message = update.getMessage().getText();
-        original.println(message);
+        console.println(message);
         ProcessCommand(message, update);
         if (!outContent.toString().isEmpty())
             sendMsg(update.getMessage().getChatId().toString(), outContent.toString());

@@ -10,7 +10,6 @@ class Bot {
     private Scanner in;
     private PrintStream outputStream;
     Map<String, Map<String, Log>> logAllUsers;
-    String nameOfUser = "EMPTY";
 
     Bot(PrintStream outputStream, InputStream inputStream) {
         this.outputStream = outputStream;
@@ -33,15 +32,9 @@ class Bot {
         logAllUsers = ConvertToMap(FileWorker.ReadFile("Log.txt"));
         if (logAllUsers == null)
             logAllUsers = new HashMap<>();
-
-        Map<String, Log> log = GetLogForUser(nameOfUser, logAllUsers);
-
-        // outputStream.println(GetGreeting(nameOfUser));
-        // outputStream.println(GetHelp());
     }
 
-
-    public void SaveInfo() {
+    void SaveInfo() {
         try {
             FileWorker.WriteFile("Log.txt", ConvertToJson(logAllUsers));
             outputStream.println("Информация успешно сохранена.");
@@ -49,68 +42,6 @@ class Bot {
         catch (Exception e) {
             outputStream.println("Произошла ошибка при сохранении.");
         }
-    }
-
-    void Start1() {
-        String nameOfUser = GetName();
-
-        logAllUsers = ConvertToMap(FileWorker.ReadFile("Log.txt"));
-        if (logAllUsers == null)
-            logAllUsers = new HashMap<>();
-
-        Map<String, Log> log = GetLogForUser(nameOfUser, logAllUsers);
-
-        outputStream.println(GetGreeting(nameOfUser));
-        outputStream.println(GetHelp());
-
-        boolean isCommand = true;
-        while (isCommand) {
-            switch(in.nextLine()) {
-                case "+":
-                    outputStream.println("Введите через пробел событие, дату начала и продолжительность события. " +
-                            "Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm");
-                    AddNote(in.nextLine().split(" "), log);
-                    break;
-                case "-":
-                    outputStream.println("Введите дату начала события. " +
-                            "Формат ввода: HH:mm-dd.MM.yyyy");
-                    RemoveNote(in.nextLine(), log);
-                    break;
-                case "перенести":
-                    outputStream.println("Введите сначала дату, с которой нужно перенести, " +
-                            "затем дату, на которую нужно перенести. " +
-                            "Формат ввода: HH:mm-dd.MM.yyyy HH:mm-dd.MM.yyyy");
-                    TransferNote(in.nextLine().split(" "), log);
-                    break;
-                case "день":
-                    outputStream.println("Ведите интересующий вас день. " +
-                            "Формат ввода: dd.MM.yyyy");
-                    ArrayList<Log> notesForDay = GetNotes(in.nextLine(), log, "dd.MM.yyyy");
-                    DisplayListOfNotes(notesForDay);
-                    break;
-                case "месяц":
-                    outputStream.println("Введите интересующий вас месяц. " +
-                            "Формат ввода: MM.yyyy");
-                    ArrayList<Log> notesForMonth = GetNotes(in.nextLine(), log, "MM.yyyy");
-                    DisplayListOfNotes(notesForMonth);
-                    break;
-                case "спасибо":
-                    isCommand = false;
-                    break;
-                case "справка":
-                    outputStream.println(GetHelp());
-                    break;
-                default:
-                    outputStream.println("Неизвестная команда");
-                    break;
-            }
-        }
-        FileWorker.WriteFile("Log.txt", ConvertToJson(logAllUsers));
-    }
-
-    private String GetName() { // Больше не понадобится
-        outputStream.println("Как вас зовут?");
-        return in.nextLine();
     }
 
     String GetGreeting(String name) {
