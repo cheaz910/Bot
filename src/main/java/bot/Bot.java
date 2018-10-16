@@ -9,6 +9,8 @@ import com.google.gson.Gson;
 class Bot {
     private Scanner in;
     private PrintStream outputStream;
+    Map<String, Map<String, Log>> logAllUsers;
+    String nameOfUser = "EMPTY";
 
     Bot(PrintStream outputStream, InputStream inputStream) {
         this.outputStream = outputStream;
@@ -28,9 +30,31 @@ class Bot {
     }
 
     void Start() {
+        logAllUsers = ConvertToMap(FileWorker.ReadFile("Log.txt"));
+        if (logAllUsers == null)
+            logAllUsers = new HashMap<>();
+
+        Map<String, Log> log = GetLogForUser(nameOfUser, logAllUsers);
+
+        // outputStream.println(GetGreeting(nameOfUser));
+        // outputStream.println(GetHelp());
+    }
+
+
+    public void SaveInfo() {
+        try {
+            FileWorker.WriteFile("Log.txt", ConvertToJson(logAllUsers));
+            outputStream.println("Информация успешно сохранена.");
+        }
+        catch (Exception e) {
+            outputStream.println("Произошла ошибка при сохранении.");
+        }
+    }
+
+    void Start1() {
         String nameOfUser = GetName();
 
-        Map<String, Map<String, Log>> logAllUsers = ConvertToMap(FileWorker.ReadFile("Log.txt"));
+        logAllUsers = ConvertToMap(FileWorker.ReadFile("Log.txt"));
         if (logAllUsers == null)
             logAllUsers = new HashMap<>();
 
@@ -84,7 +108,7 @@ class Bot {
         FileWorker.WriteFile("Log.txt", ConvertToJson(logAllUsers));
     }
 
-    private String GetName() {
+    private String GetName() { // Больше не понадобится
         outputStream.println("Как вас зовут?");
         return in.nextLine();
     }
@@ -93,13 +117,14 @@ class Bot {
         return String.format("Здравствуй, %s!", name);
     }
 
-    private String GetHelp() {
+    String GetHelp() {
         return "Чтобы добавить событие, введите: +. \n" +
                 "Чтобы удалить событие, введите: -. \n" +
                 "Чтобы перенести событие, введите: перенести. \n" +
                 "Чтобы посмотреть все события за день, введите: день. \n" +
                 "Чтобы посмотреть все события за месяц, введите: месяц. \n" +
-                "Чтобы завершить работу, введите: спасибо. ";
+                "Чтобы сказать спасибо, введите: спасибо. \n" +
+                "Чтобы сохранить календарь, введите: сохранить. ";
     }
 
     void AddNote(String[] info, Map<String, Log> notes) {
@@ -209,7 +234,7 @@ class Bot {
         return result;
     }
 
-    private void DisplayListOfNotes(ArrayList<Log> notes) {
+    void DisplayListOfNotes(ArrayList<Log> notes) {
         String pattern = "HH:mm-dd.MM.yyyy";
         for (Log log : notes) {
             outputStream.println("Начало события: " + GetCorrectStringFromDate(log.startDate, pattern) +
