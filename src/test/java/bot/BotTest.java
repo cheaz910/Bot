@@ -6,10 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class BotTest {
     @Test
@@ -46,7 +43,7 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         assertTrue(notes.containsKey("13:40-02.09.2018"));
         Log log = notes.get("13:40-02.09.2018");
         assertEquals(log.note, "событие");
@@ -56,10 +53,28 @@ public class BotTest {
         assertEquals(bot.GetCorrectDate("01:50-03.09.2018", pattern), log.endDate);
     }
 
+    @Test
+    public final void testAddNoteInDifferentFormat_Default() {   // Входные данные в укорочённом формате
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        Bot bot = new Bot(new PrintStream(outContent));
+        Map<String, Log> notes = new HashMap<>();
+        String command = "событие 13:40-02 12:10";
+        bot.AddNote(command, notes);
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        String strDate = "13:40-02." + month + "." + year;
+        assertTrue(notes.containsKey(strDate));
+        Log log = notes.get(strDate);
+        assertEquals(log.note, "событие");
+        String pattern = "HH:mm-dd.MM.yyyy";
+        assertEquals("Событие добавлено\n", outContent.toString());
+        assertEquals(bot.GetCorrectDate(strDate, pattern), log.startDate);
+    }
+
     private boolean WrongFormatAddNote(String command, ByteArrayOutputStream outContent) {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         return notes.size() == 0;
     }
 
@@ -88,7 +103,7 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 25:40-02.09.2018 01:10";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         assertTrue(notes.containsKey("01:40-03.09.2018"));
         Log log = notes.get("01:40-03.09.2018");
         assertEquals(log.note, "событие");
@@ -102,8 +117,8 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 01:10";
-        bot.AddNote(command.split(" "), notes);
-        bot.AddNote(secondCommand.split(" "), notes);
+        bot.AddNote(command, notes);
+        bot.AddNote(secondCommand, notes);
         return notes;
     }
 
@@ -169,6 +184,29 @@ public class BotTest {
     }
 
     @Test
+    public final void testRemoveNoteOfDayMonthYear_Default() { // Удаление событий за день, месяцб год
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        Bot bot = new Bot(new PrintStream(outContent));
+        Map<String, Log> notes = new HashMap<>();
+        notes.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
+        notes.put("20:40-02.09.2018", new Log("событие2", new Date(0), new Date(0)));
+        bot.RemoveNotesOfDayMonthYear("02.09.2018", "dd.MM.yyyy", notes);
+        assertEquals("События удалены\n", outContent.toString());
+        assertEquals(0, notes.size());
+
+        notes.put("13:40-02.10.2018", new Log("событие", new Date(0), new Date(0)));
+        notes.put("20:40-02.09.2018", new Log("событие2", new Date(0), new Date(0)));
+        bot.RemoveNotesOfDayMonthYear("09.2018", "MM.yyyy", notes);
+        assertEquals("События удалены\n", outContent.toString());
+        assertEquals(1, notes.size());
+
+        notes.put("13:40-02.09.2019", new Log("событие2", new Date(0), new Date(0)));
+        bot.RemoveNotesOfDayMonthYear("2018", "yyyy", notes);
+        assertEquals("События удалены\n", outContent.toString());
+        assertEquals(1, notes.size());
+    }
+
+    @Test
     public final void testRemoveNote_NotExist() { // Удаление не существующего события
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         Bot bot = new Bot(new PrintStream(outContent));
@@ -196,7 +234,7 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         assertEquals("Событие добавлено\n", outContent.toString());
         String note = notes.get("13:40-02.09.2018").note;
         String secondCommand = "13:40-02.09.2018 15:25-03.10.2019";
@@ -216,7 +254,7 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         assertEquals("Событие добавлено\n", outContent.toString());
         outContent.reset();
         bot.TransferNote(secondCommand.split(" "), notes);
@@ -263,9 +301,9 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 15:30-02.09.2018 01:40";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         String secondCommand = "событие 10:30-02.11.2018 01:40";
-        bot.AddNote(secondCommand.split(" "), notes);
+        bot.AddNote(secondCommand, notes);
         assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
         ArrayList<Log> listForMonth = bot.GetNotes("11.2018", notes, "MM.yyyy");
         assertEquals(1, listForMonth.size());
@@ -279,9 +317,9 @@ public class BotTest {
         Bot bot = new Bot(new PrintStream(outContent));
         Map<String, Log> notes = new HashMap<>();
         String command = "событие 15:30-02.09.2018 01:40";
-        bot.AddNote(command.split(" "), notes);
+        bot.AddNote(command, notes);
         String secondCommand = "событие 10:30-02.11.2018 01:40";
-        bot.AddNote(secondCommand.split(" "), notes);
+        bot.AddNote(secondCommand, notes);
         assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
         ArrayList<Log> listForMonth = bot.GetNotes("02.11.2018", notes, "MM.yyyy");
         assertEquals(0, listForMonth.size());
@@ -314,7 +352,7 @@ public class BotTest {
         Map<String, Map<String, Log>> notes = new HashMap<>();
         notes.put("Ilnur", new HashMap<String, Log>());
         String command = "событие 15:30-02.09.2018 01:40";
-        bot.AddNote(command.split(" "), notes.get("Ilnur"));
+        bot.AddNote(command, notes.get("Ilnur"));
         assertEquals("Событие добавлено\n", outContent.toString());
         String json = bot.ConvertToJson(notes);
         Map<String, Map<String, Log>> secondNotes = bot.ConvertToMap(json);

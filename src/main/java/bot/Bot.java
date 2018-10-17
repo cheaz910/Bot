@@ -49,34 +49,98 @@ class Bot {
     }
 
     String GetHelp() {
-        return "Чтобы добавить событие, введите: +. \n" +
-                "Чтобы удалить событие, введите: -. \n" +
-                "Чтобы перенести событие, введите: перенести. \n" +
+        return  "Чтобы перенести событие, введите: перенести. \n" +
                 "Чтобы посмотреть все события за день, введите: день. \n" +
                 "Чтобы посмотреть все события за месяц, введите: месяц. \n" +
-                "Чтобы сказать спасибо, введите: спасибо. \n" +
+                "Чтобы добавить событие, введите: +. \n" +
+                "Чтобы удалить событие, введите: -. \n" +
+                "Чтобы удалить все события за день, введите: -день. \n" +
+                "Чтобы удалить все события за месяц, введите: -месяц. \n" +
+                "Чтобы удалить все события за год, введите: -год. \n" +
+                "Чтобы отметить посещённое событие, введите: посетил. \n" +
+                "Чтобы завершить работу, введите: спасибо. \n" +
                 "Чтобы сохранить календарь, введите: сохранить. ";
     }
 
-    void AddNote(String[] info, Map<String, Log> notes) {
-        if (info.length != 3){
+    void AddNote(String note, Map<String, Log> notes) {
+        String[] info = note.split(" ");
+        if (info.length < 3){
             outputStream.println("Неверный формат ввода");
             return;
         }
-        String strStartDate = info[1];
-        Date startDate = GetCorrectDate(strStartDate, "HH:mm-dd.MM.yyyy");
-        Date duration = GetCorrectDate(info[2], "HH:mm");
+        String strStartDate = info[info.length-2];
+        String strDuration = info[info.length-1];
+        Date startDate = СomplementDate(strStartDate);
+        Date duration = GetCorrectDate(strDuration, "HH:mm");
         if (startDate == null || duration == null) {
             return;
         }
         Date endDate = GetEndDate(startDate, duration);
-        Log newLog = new Log(info[0], startDate, endDate);
+        Log newLog = new Log(note.substring(0, note.length()-strStartDate.length()-strDuration.length()-2), startDate, endDate);
         if (IsConflict(notes, newLog)) {
             outputStream.println("На это время уже запланировано событие");
             return;
         }
         notes.put(GetCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy"), newLog);
         outputStream.println("Событие добавлено");
+    }
+
+    Date СomplementDate(String strStartDate) {
+        switch(strStartDate.length()) {
+            case 16:
+                return GetCorrectDate(strStartDate, "HH:mm-dd.MM.yyyy");
+            case 11:
+                Date interimDate = GetCorrectDate(strStartDate, "HH:mm-dd.MM");
+                if (interimDate != null) {
+                    int year = Calendar.getInstance().get(Calendar.YEAR);
+                    return GetCorrectDate(strStartDate + "." + year, "HH:mm-dd.MM.yyyy");
+                }
+                else { return null; }
+            case 8:
+                Date interimDate2 = GetCorrectDate(strStartDate, "HH:mm-dd");
+                if (interimDate2 != null) {
+                    int year = Calendar.getInstance().get(Calendar.YEAR);
+                    int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+                    return GetCorrectDate(strStartDate + "." + month + "." + year, "HH:mm-dd.MM.yyyy");
+                }
+                else { return null; }
+            default:
+                outputStream.println("Неверный формат даты/времени. [" + strStartDate + "]");
+                return null;
+        }
+    }
+
+    void CheckNote(String strDate, Map<String, Log> notes) {
+        Date date =  СomplementDate(strDate);
+        if (date == null) {
+            outputStream.println("Неверный формат ввода");
+            return;
+        }
+        String newStrDate = GetCorrectStringFromDate(date, "HH:mm-dd.MM.yyyy");
+        if (!notes.containsKey(newStrDate)) {
+            outputStream.println("Такого события нет");
+            return;
+        }
+        notes.get(newStrDate).check = true;
+        outputStream.println("Событие отмечено, как посещённое");
+    }
+
+    void RemoveNotesOfDayMonthYear(String strDate, String pattern, Map<String, Log> notes) {
+        Date date = GetCorrectDate(strDate, pattern);
+        if (date == null) {
+            outputStream.println("Неверный формат ввода");
+            return;
+        }
+        ArrayList<String> dates = new ArrayList<>();
+        for (String dateOfNote : notes.keySet()) {
+            if (dateOfNote.endsWith(strDate) ){
+                dates.add(dateOfNote);
+            }
+        }
+        for (String dateOfNote : dates) {
+            notes.remove(dateOfNote);
+        }
+        outputStream.println("События удалены");
     }
 
     Date GetEndDate(Date startDate, Date duration) {
@@ -129,8 +193,9 @@ class Bot {
             return;
         }
         String note = notes.get(strOldDate).note;
+        boolean check = notes.get(strOldDate).check;
         Date endDate = RecalculateEndDate(oldDate, notes.get(strOldDate).endDate, newDate);
-        Log newLog = new Log(note, newDate, endDate);
+        Log newLog = new Log(note, newDate, endDate, check);
         if (IsConflict(notes, newLog)) {
             outputStream.println("На это время уже запланировано событие");
             return;

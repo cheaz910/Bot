@@ -20,14 +20,20 @@ class TelegramBot extends TelegramLongPollingBot {
     PrintStream console = System.out;
     HashMap<String, UserInfo> usersInfo = new HashMap<>();
     private static final Map<String, String> responses = new HashMap<String, String> () {{
-            put("+", "Введите через пробел событие, дату начала и " +
-                    "продолжительность события. Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm");
-            put("-", "Введите дату начала события. Формат ввода: HH:mm-dd.MM.yyyy");
-            put("перенести", "Введите сначала дату, с которой нужно перенести, " +
-                    "затем дату, на которую нужно перенести. " +
-                    "Формат ввода: HH:mm-dd.MM.yyyy HH:mm-dd.MM.yyyy");
-            put("день", "Ведите интересующий вас день. Формат ввода: dd.MM.yyyy");
-            put("месяц", "Введите интересующий вас месяц. Формат ввода: MM.yyyy");
+        put("+", "Введите через пробел событие, дату начала и продолжительность события. \n" +
+                "Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm, \n" +
+                "              или событие HH:mm-dd.MM HH:mm, или событие HH:mm-dd HH:mm ");
+        put("-", "Введите дату начала события. Формат ввода: HH:mm-dd.MM.yyyy, или HH:mm-dd.MM, или HH:mm-dd");
+        put("перенести", "Введите сначала дату, с которой нужно перенести, " +
+                "затем дату, на которую нужно перенести. " +
+                "Формат ввода: HH:mm-dd.MM.yyyy HH:mm-dd.MM.yyyy");
+        put("день", "Ведите интересующий вас день. Формат ввода: dd.MM.yyyy");
+        put("месяц", "Введите интересующий вас месяц. Формат ввода: MM.yyyy");
+        put("-день", "Введите день, события которого нужно удалить. Формат ввода: dd.MM.yyyy");
+        put("-месяц", "Введите месяц, события которого нужно удалить. Формат ввода: MM.yyyy");
+        put("-год", "Введите год, события которого нужно удалить. Формат ввода: yyyy");
+        put("посетил", "Введите дату, события которое посетили.\n" +
+                "Формат ввода: HH:mm-dd.MM.yyyy, или HH:mm-dd.MM, или HH:mm-dd");
         }};
 
 
@@ -121,7 +127,7 @@ class TelegramBot extends TelegramLongPollingBot {
                 }
                 break;
             case "+":
-                bot.AddNote(argument.split(" "), log);
+                bot.AddNote(argument, log);
                 break;
             case "-":
                 bot.RemoveNote(argument, log);
@@ -136,6 +142,18 @@ class TelegramBot extends TelegramLongPollingBot {
             case "месяц":
                 ArrayList<Log> notesForMonth = bot.GetNotes(argument, log, "MM.yyyy");
                 bot.DisplayListOfNotes(notesForMonth);
+                break;
+            case "-день":
+                bot.RemoveNotesOfDayMonthYear(argument, "dd.MM.yyyy", log);
+                break;
+            case "-месяц":
+                bot.RemoveNotesOfDayMonthYear(argument, "MM.yyyy", log);
+                break;
+            case "-год":
+                bot.RemoveNotesOfDayMonthYear(argument, "yyyy", log);
+                break;
+            case "посетил":
+                bot.CheckNote(argument, log);
                 break;
             case "спасибо":
                 outputStream.println("пожалуйста");
