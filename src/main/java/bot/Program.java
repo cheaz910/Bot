@@ -13,7 +13,5 @@ public class Program {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
-        //Bot bot = new Bot(System.out, System.in);
-        //bot.Start();
     }
 }
