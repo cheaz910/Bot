@@ -52,7 +52,7 @@ public class GetTasks {
             outputStream.println("Cобытие: " + log.task + " Начало события: " +
                     DateWorker.getCorrectStringFromDate(log.startDate, pattern) +
                     " Конец события: " + DateWorker.getCorrectStringFromDate(log.endDate, pattern)
-                    + " Выполнено: " + isDone + "/n");
+                    + " Выполнено: " + isDone);
         }
     }
 }

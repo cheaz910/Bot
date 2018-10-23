@@ -40,7 +40,7 @@ public class AddTaskTest {
         assertEquals("событие", log.task);
         assertEquals(DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"), log.startDate);
         Date startDate = DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
-        Date duration = DateWorker.getCorrectDate(strDate, "HH:mm");
+        Date duration = DateWorker.getCorrectDate("12:10", "HH:mm");
         assertEquals(DateWorker.getEndDate(startDate, duration), log.endDate);
         assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
@@ -59,7 +59,7 @@ public class AddTaskTest {
         assertEquals("событие", log.task);
         assertEquals(DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"), log.startDate);
         Date startDate = DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
-        Date duration = DateWorker.getCorrectDate(strDate, "HH:mm");
+        Date duration = DateWorker.getCorrectDate("12:10", "HH:mm");
         assertEquals(DateWorker.getEndDate(startDate, duration), log.endDate);
         assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
@@ -106,16 +106,16 @@ public class AddTaskTest {
     public final void testWrongFormats() {  //Неверные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         assertTrue(wrongFormat("событие 13:40-02.09.2018", outContent)); // На входе не указывается продолжительность
-        assertEquals("Неверный формат ввода\n", outContent.toString());
+        assertEquals("Неверный формат ввода: событие 13:40-02.09.2018\n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("событие", outContent)); // На входе не указывается начало и продолжительность
-        assertEquals("Неверный формат ввода\n", outContent.toString());
+        assertEquals("Неверный формат ввода: событие\n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("", outContent)); // На входе пустая строка
         assertEquals("Неверный формат ввода: \n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("событие 11340-02.09.2018 01:30", outContent)); // На входе начало в неправильном формате
-        assertEquals("Неверный формат даты: 11340-02.09.2018 01:30\n", outContent.toString());
+        assertEquals("Неверный формат даты: 11340-02.09.2018\n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("событие 13:40-02.09.2018 11330", outContent)); // На входе продолжительность в неправильном формате
         assertEquals("Неверный формат продолжительности: 11330\n", outContent.toString());

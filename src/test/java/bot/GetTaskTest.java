@@ -19,12 +19,14 @@ public class GetTaskTest {
         AddTask.doCommand(command, tasks, outputStream);
         String secondCommand = "событие 10:30-02.11.2018 01:00";
         AddTask.doCommand(secondCommand, tasks, outputStream);
-        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());//выдаёт ошибку
+        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
+        outContent.reset();
         GetTasks.doCommand("11.2018", tasks, "MM.yyyy", outputStream);
         assertEquals("Cобытие: событие Начало события: 10:30-02.11.2018 " +
-                "Конец события: 11:30-02.11.2018 Выполнено: нет\n\n", outContent.toString());
+                "Конец события: 11:30-02.11.2018 Выполнено: Нет\n", outContent.toString());
+        outContent.reset();
         GetTasks.doCommand("02.09.2018", tasks, "dd.MM.yyyy", outputStream);
         assertEquals("Cобытие: событие Начало события: 15:30-02.09.2018 " +
-                "Конец события: 16:30-02.09.2018 Выполнено: нет\n\n", outContent.toString());
+                "Конец события: 16:30-02.09.2018 Выполнено: Нет\n", outContent.toString());
     }
 }

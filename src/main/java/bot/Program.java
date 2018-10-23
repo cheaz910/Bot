@@ -1,8 +1,17 @@
 package bot;
 
+import org.telegram.telegrambots.ApiContextInitializer;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+
 public class Program {
     public static void main(String[] argv){
-        Bot bot = new Bot(System.out, System.in);
-        bot.Start();
+        ApiContextInitializer.init();
+        TelegramBotsApi botapi = new TelegramBotsApi();
+        try {
+            botapi.registerBot(new TelegramBot());
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
     }
 }

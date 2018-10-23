@@ -57,7 +57,7 @@ public class RemoveTasksTest {
         Map<String, Log> tasks = new HashMap<>();
         tasks.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
         RemoveTasks.removeOneTask("13:41231202.09.2018", tasks, new PrintStream(outContent));
-        assertEquals("Неверный формат даты: 13:41231202.09.2018", outContent.toString());
+        assertEquals("Неверный формат даты: 13:41231202.09.2018\n", outContent.toString());
         assertEquals(1, tasks.size());
     }
 
@@ -101,8 +101,8 @@ public class RemoveTasksTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         Map<String, Log> tasks = new HashMap<>();
         tasks.put("13:40-02.09.2018", new Log("событие", new Date(0), new Date(0)));
-        RemoveTasks.removeTasksOfDayMonthYear("13:41231202.09.2018", tasks, "yyyy", new PrintStream(outContent));
-        assertEquals("Неверный формат даты: 13:41231202.09.2018", outContent.toString());
+        RemoveTasks.removeTasksOfDayMonthYear("13-41231202.09.2018", tasks, "dd.MM.yyyy", new PrintStream(outContent));
+        assertEquals("Неверный формат даты: 13-41231202.09.2018\n", outContent.toString());
         assertEquals(1, tasks.size());
     }
 
