@@ -18,7 +18,7 @@ class TelegramBot extends TelegramLongPollingBot {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream outputStream = new PrintStream(outContent);
     PrintStream console = System.out;
-    HashMap<String, UserInfo> usersInfo = new HashMap<>();
+    Map<String, UserInfo> usersInfo = new HashMap<>();
     private static final Map<String, String> responses = new HashMap<String, String> () {{
         put("+", "Введите через пробел событие, дату начала и продолжительность события. \n" +
                 "Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm, \n" +
@@ -111,7 +111,7 @@ class TelegramBot extends TelegramLongPollingBot {
             }
         }
 
-        switch(command) {
+        switch(command) { // к нижнему регистру
             case "/start":
                 if (userInfo.stage == 0) {
                     userInfo.isStarted = true;
