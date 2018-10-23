@@ -49,10 +49,10 @@ public class GetTasks {
         String pattern = "HH:mm-dd.MM.yyyy";
         for (Log log : notes) {
             String isDone = log.check ? "Да" : "Нет";
-            outputStream.println(" Cобытие: " + log.task + "Начало события: " +
+            outputStream.println("Cобытие: " + log.task + " Начало события: " +
                     DateWorker.getCorrectStringFromDate(log.startDate, pattern) +
                     " Конец события: " + DateWorker.getCorrectStringFromDate(log.endDate, pattern)
-                    + " Выполнено: " + isDone);
+                    + " Выполнено: " + isDone + "/n");
         }
     }
 }

@@ -20,11 +20,11 @@ public class AddTaskTest {
         AddTask.doCommand("событие 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("13:40-02.09.2018"));
         Log log = tasks.get("13:40-02.09.2018");
-        assertEquals(log.task, "событие");
+        assertEquals("событие", log.task);
         String pattern = "HH:mm-dd.MM.yyyy";
-        assertEquals(log.startDate, DateWorker.getCorrectDate("13:40-02.09.2018", pattern));
-        assertEquals(log.endDate, DateWorker.getCorrectDate("01:50-03.09.2018", pattern));
-        assertEquals(log.check, false);
+        assertEquals(DateWorker.getCorrectDate("13:40-02.09.2018", pattern), log.startDate);
+        assertEquals(DateWorker.getCorrectDate("01:50-03.09.2018", pattern), log.endDate);
+        assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
     }
 
@@ -37,12 +37,12 @@ public class AddTaskTest {
         String strDate = "13:40-02.09." + year;
         assertTrue(tasks.containsKey(strDate));
         Log log = tasks.get(strDate);
-        assertEquals(log.task, "событие");
-        assertEquals(log.startDate, DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"));
+        assertEquals("событие", log.task);
+        assertEquals(DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"), log.startDate);
         Date startDate = DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
         Date duration = DateWorker.getCorrectDate(strDate, "HH:mm");
-        assertEquals(log.endDate, DateWorker.getEndDate(startDate, duration));
-        assertEquals(log.check, false);
+        assertEquals(DateWorker.getEndDate(startDate, duration), log.endDate);
+        assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
     }
 
@@ -56,26 +56,12 @@ public class AddTaskTest {
         String strDate = "13:40-02." + month + "." + year;
         assertTrue(tasks.containsKey(strDate));
         Log log = tasks.get(strDate);
-        assertEquals(log.task, "событие");
-        assertEquals(log.startDate, DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"));
+        assertEquals("событие", log.task);
+        assertEquals(DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy"), log.startDate);
         Date startDate = DateWorker.getCorrectDate(strDate, "HH:mm-dd.MM.yyyy");
         Date duration = DateWorker.getCorrectDate(strDate, "HH:mm");
-        assertEquals(log.endDate, DateWorker.getEndDate(startDate, duration));
-        assertEquals(log.check, false);
-        assertEquals("Событие добавлено\n", outContent.toString());
-    }
-
-    @Test
-    public final void testInputWithoutDuration() {   // Входные данные без продолжительности
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
-        AddTask.doCommand("событие 13:40-02.09.2018 -", tasks, new PrintStream(outContent));
-        assertTrue(tasks.containsKey("13:40-02.09.2018"));
-        Log log = tasks.get("13:40-02.09.2018");
-        assertEquals(log.task, "событие");
-        assertEquals(log.startDate, DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.endDate, DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.check, false);
+        assertEquals(DateWorker.getEndDate(startDate, duration), log.endDate);
+        assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
     }
 
@@ -86,11 +72,28 @@ public class AddTaskTest {
         AddTask.doCommand("событие1 событие2 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("13:40-02.09.2018"));
         Log log = tasks.get("13:40-02.09.2018");
-        assertEquals(log.task, "событие1 событие2");
-        assertEquals(log.startDate, DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.endDate, DateWorker.getCorrectDate("01:50-03.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.check, false);
+        assertEquals("событие1 событие2", log.task);
+        assertEquals(DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy"), log.startDate);
+        assertEquals(DateWorker.getCorrectDate("01:50-03.09.2018", "HH:mm-dd.MM.yyyy"), log.endDate);
+        assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
+    }
+
+    @Test
+    public final void testСonflictingTasks() {   // конфликтующие события
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        Map<String, Log> tasks = new HashMap<>();
+        AddTask.doCommand("событие1 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
+        assertTrue(tasks.containsKey("13:40-02.09.2018"));
+        Log log = tasks.get("13:40-02.09.2018");
+        assertEquals("событие1", log.task);
+        assertEquals(DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy"), log.startDate);
+        assertEquals(DateWorker.getCorrectDate("01:50-03.09.2018", "HH:mm-dd.MM.yyyy"), log.endDate);
+        assertEquals(false, log.check);
+        AddTask.doCommand("событие2 17:40-02.09.2018 01:00", tasks, new PrintStream(outContent));
+        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
+        assertEquals(1, tasks.size());
+
     }
 
     private boolean wrongFormat(String command, ByteArrayOutputStream outContent) {
@@ -109,7 +112,7 @@ public class AddTaskTest {
         assertEquals("Неверный формат ввода\n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("", outContent)); // На входе пустая строка
-        assertEquals("Неверный формат ввода\n", outContent.toString());
+        assertEquals("Неверный формат ввода: \n", outContent.toString());
         outContent.reset();
         assertTrue(wrongFormat("событие 11340-02.09.2018 01:30", outContent)); // На входе начало в неправильном формате
         assertEquals("Неверный формат даты: 11340-02.09.2018 01:30\n", outContent.toString());
@@ -126,49 +129,12 @@ public class AddTaskTest {
         AddTask.doCommand(task, tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("01:40-03.09.2018"));
         Log log = tasks.get("01:40-03.09.2018");
-        assertEquals(log.task, "событие");
-        assertEquals(log.startDate, DateWorker.getCorrectDate("01:40-03.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.endDate, DateWorker.getCorrectDate("02:50-03.09.2018", "HH:mm-dd.MM.yyyy"));
-        assertEquals(log.check, false);
+        assertEquals("событие", log.task);
+        assertEquals(DateWorker.getCorrectDate("01:40-03.09.2018", "HH:mm-dd.MM.yyyy"), log.startDate);
+        assertEquals(DateWorker.getCorrectDate("02:50-03.09.2018", "HH:mm-dd.MM.yyyy"), log.endDate);
+        assertEquals(false, log.check);
         assertEquals("Событие добавлено\n", outContent.toString());
     }
 
-    private Map<String, Log> getTasksAfterAdding(String secondCommand, ByteArrayOutputStream outContent) {
-        PrintStream outputStream = new PrintStream(outContent);
-        Map<String, Log> tasks = new HashMap<>();
-        String command = "событие 13:40-02.09.2018 01:10";
-        AddTask.doCommand(command, tasks, outputStream);
-        AddTask.doCommand(secondCommand, tasks, outputStream);
-        return tasks;
-    }
 
-    @Test
-    public final void testIsConflict_NoIntersection() { // Два события не пересекаются
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        assertEquals(2, getTasksAfterAdding("событие2 12:10-02.09.2018 1:10", outContent).size());
-        assertEquals("Событие добавлено\nСобытие добавлено\n", outContent.toString());
-    }
-
-
-    @Test
-    public final void testIsConflict_OneIntersection() { // События пересекаются в одной точке
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        assertEquals(1, getTasksAfterAdding("событие2 12:10-02.09.2018 1:30", outContent).size());
-        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
-    }
-
-
-    @Test
-    public final void testIsConflict_Intersection1() { // Конец одного события находится в промежутке другого события
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        assertEquals(1, getTasksAfterAdding("событие2 12:10-02.09.2018 01:35", outContent).size());
-        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
-    }
-
-    @Test
-    public final void testIsConflict_Nesting() { // Одно событие находится в промежутке другого события
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        assertEquals(1, getTasksAfterAdding("событие2 13:45-02.09.2018 00:30", outContent).size());
-        assertEquals("Событие добавлено\nНа это время уже запланировано событие\n", outContent.toString());
-    }
 }

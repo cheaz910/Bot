@@ -57,10 +57,10 @@ public class TransferTaskTest {
         outContent.reset();
         assertTrue(WrongFormatTransferNote("11340---...-02.09.2018 15:40-03.09.2018", outContent));
         // Первая дата с ошибкой
-        assertEquals("Неверный формат даты/времени. [11340---...-02.09.2018]\n", outContent.toString());
+        assertEquals("Неверный формат даты: 11340---...-02.09.2018\n", outContent.toString());
         outContent.reset();
         assertTrue(WrongFormatTransferNote("13:40-02.09.2018 11330--..32140.1", outContent));
         // Вторая дата с ошибкой
-        assertEquals("Неверный формат даты/времени. [11330--..32140.1]\n", outContent.toString());
+        assertEquals("Неверный формат даты: 11330--..32140.1\n", outContent.toString());
     }
 }
