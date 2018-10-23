@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="">
+    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="Добавлен телеграмм бот">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ilnur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_telegram_telegrambots_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/aopalliance-repackaged-2.5.0-b32-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/aopalliance-repackaged-2.5.0-b32.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.9-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.5-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-framework-2.3.28-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-framework-2.3.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-2.3.28-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-2.3.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-server-2.3.28-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-server-2.3.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-19.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-19.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guice-4.1.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guice-4.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-api-2.5.0-b32-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-api-2.5.0-b32.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-locator-2.5.0-b32-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-locator-2.5.0-b32.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-utils-2.5.0-b32-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hk2-utils-2.5.0-b32.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpclient-4.5.3-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpclient-4.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpcore-4.4.6-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpcore-4.4.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpmime-4.5.3-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpmime-4.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.8.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.8.7-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.8.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.8.7-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.8.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-jaxrs-base-2.8.7-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-jaxrs-base-2.8.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-jaxrs-json-provider-2.8.7-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-jaxrs-json-provider-2.8.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-module-jaxb-annotations-2.8.7-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-module-jaxb-annotations-2.8.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javassist-3.20.0-GA-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javassist-3.20.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation-api-1.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation-api-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.inject-1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.inject-1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.inject-2.5.0-b32-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.inject-2.5.0-b32.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-client-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-client-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-common-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-common-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-container-grizzly2-http-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-container-grizzly2-http-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-entity-filtering-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-entity-filtering-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-guava-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-media-jaxb-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-media-jaxb-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-media-json-jackson-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-media-json-jackson-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-server-2.25.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jersey-server-2.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/json-20160810-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/json-20160810.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/osgi-resource-locator-1.0.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/osgi-resource-locator-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/telegrambots-4.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/telegrambots-4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/telegrambots-meta-4.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/telegrambots-meta-4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/validation-api-1.1.0.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/validation-api-1.1.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/GetTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/GetTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/AddTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/AddTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/RemoveTasksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/RemoveTasksTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,60 +113,96 @@
     <session id="837542613">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="3" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.32" value="2" />
-          <entry key="project.open.time.33" value="2" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="65" />
-          <entry key="txt" value="8" />
-          <entry key="xml" value="9" />
+          <entry key="class" value="2" />
+          <entry key="java" value="158" />
+          <entry key="txt" value="4" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="65" />
-          <entry key="PLAIN_TEXT" value="8" />
-          <entry key="XML" value="9" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="158" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="19607" />
-          <entry key="txt" value="378" />
-          <entry key="xml" value="30" />
+          <entry key="java" value="13919" />
+          <entry key="txt" value="240" />
+          <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19607" />
-          <entry key="PLAIN_TEXT" value="378" />
-          <entry key="XML" value="30" />
+          <entry key="JAVA" value="13919" />
+          <entry key="PLAIN_TEXT" value="240" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="2" />
-          <entry key="git.branch.checkout.remote" value="1" />
           <entry key="git.branch.compare" value="1" />
-          <entry key="git.branch.delete.local" value="1" />
           <entry key="git.branch.merge" value="1" />
-          <entry key="git.branch.rebase" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-2099313540">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="55" />
+          <entry key="md" value="1" />
+          <entry key="txt" value="6" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="55" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2962" />
+          <entry key="txt" value="46" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2962" />
+          <entry key="PLAIN_TEXT" value="46" />
         </counts>
       </usages-collector>
     </session>
@@ -84,8 +212,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3000">
-              <caret line="164" column="8" lean-forward="true" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+            <state relative-caret-position="555">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,10 +231,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/GetTasks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2147">
-              <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+            <state relative-caret-position="502">
+              <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,27 +243,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/UserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/MyMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="60">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -138,11 +257,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -150,7 +266,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="225">
               <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -162,7 +278,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="135">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -172,18 +288,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="45">
               <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
@@ -200,20 +307,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>outputStream.println(</find>
-      <find>stage</find>
-      <find>previousCommand</find>
-      <find>update.getMessage().getChatId().toString()</find>
-      <find>new SimpleEntry&lt;&gt;</find>
+      <find>ConvertToMap</find>
+      <find>File</find>
+      <find>RemoveNotesOfDayMonthYear</find>
     </findStrings>
-    <replaceStrings>
-      <replace>sendMsg(update.getMessage().getChatId().toString(),</replace>
-      <replace>userInfo.isStarted</replace>
-      <replace>userInfo.stage</replace>
-      <replace>userInfo.previousCommand</replace>
-      <replace>chatId</replace>
-      <replace>put</replace>
-    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
@@ -221,15 +318,15 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="cheaz910Т" />
         <option value="cheaz910" />
         <option value="Ilnur" />
       </list>
     </option>
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="9b4cc23e59d9d71f31602895b81e5fbcaf8c5af1" />
+        <entry key="$PROJECT_DIR$" value="cf33ecb28fe304f65b1be386d2941c501d72283b" />
       </map>
     </option>
   </component>
@@ -238,9 +335,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/Bot.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Log.java" />
         <option value="$PROJECT_DIR$/src/test/java/BotTest.java" />
-        <option value="$PROJECT_DIR$/Log.txt" />
         <option value="$PROJECT_DIR$/src/main/java/FileWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/Program.java" />
@@ -248,13 +345,36 @@
         <option value="$PROJECT_DIR$/src/test/BotTest.java" />
         <option value="$PROJECT_DIR$/src/test/bot/BotTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/AddNotes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/RemodeNote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/RemoveNote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/TransferNote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/RemoveNotesOfDayMonthYear.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/AddNote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/RemoveNotes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/GetNotes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/CheckNote.java" />
+        <option value="$PROJECT_DIR$/Log.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/AddTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/DateWorkerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/RemoveTasksTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/TransferTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/RemoveTasks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/MyMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/CheckTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/DateWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/AddTask.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/TransferTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/GetTasks.java" />
       </list>
     </option>
   </component>
@@ -265,17 +385,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="519" />
-    <option name="y" value="36" />
-    <option name="width" value="1368" />
-    <option name="height" value="1045" />
+    <option name="x" value="324" />
+    <option name="y" value="25" />
+    <option name="width" value="1376" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -432,8 +546,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -441,11 +555,10 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/ilnur/IdeaProjects/Bot/src/test/java/bot/BotTest.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539681864804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540325426159" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -475,7 +588,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="JUnit.All in Bot">
     <configuration name="Program" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -489,6 +602,28 @@
       <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-1.11.0-openjdk-amd64" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.AddTaskTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -507,7 +642,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BotTest.testAddNote_Default" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileWorkerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bot" />
       <extension name="coverage">
         <pattern>
@@ -516,14 +651,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bot" />
-      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
-      <option name="METHOD_NAME" value="testAddNote_Default" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="bot.FileWorkerTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BotTest.testGetCorrectDate_Default" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="bot in Bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bot" />
       <extension name="coverage">
         <pattern>
@@ -532,60 +665,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bot" />
-      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
-      <option name="METHOD_NAME" value="testGetCorrectDate_Default" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BotTest.testGetCorrectDate_WrongFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bot" />
-      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
-      <option name="METHOD_NAME" value="testGetCorrectDate_WrongFormat" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BotTest.testGetNotes_WrongPattern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bot" />
-      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
-      <option name="METHOD_NAME" value="testGetNotes_WrongPattern" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Program" />
-      <item itemvalue="JUnit.BotTest.testGetNotes_WrongPattern" />
-      <item itemvalue="JUnit.BotTest.testGetCorrectDate_Default" />
-      <item itemvalue="JUnit.BotTest.testGetCorrectDate_WrongFormat" />
       <item itemvalue="JUnit.BotTest" />
-      <item itemvalue="JUnit.BotTest.testAddNote_Default" />
+      <item itemvalue="JUnit.AddTaskTest" />
+      <item itemvalue="JUnit.FileWorkerTest" />
+      <item itemvalue="JUnit.bot in Bot" />
+      <item itemvalue="JUnit.All in Bot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BotTest.testAddNote_Default" />
+        <item itemvalue="JUnit.All in Bot" />
+        <item itemvalue="JUnit.bot in Bot" />
+        <item itemvalue="JUnit.FileWorkerTest" />
+        <item itemvalue="JUnit.AddTaskTest" />
         <item itemvalue="JUnit.BotTest" />
-        <item itemvalue="JUnit.BotTest.testGetCorrectDate_WrongFormat" />
-        <item itemvalue="JUnit.BotTest.testGetCorrectDate_Default" />
-        <item itemvalue="JUnit.BotTest.testGetNotes_WrongPattern" />
       </list>
     </recent_temporary>
   </component>
@@ -635,60 +734,46 @@
       <option name="project" value="LOCAL" />
       <updated>1538517984259</updated>
     </task>
-    <task id="LOCAL-00006" summary="Исправлено DisplayListOfNotesch">
-      <created>1538541564787</created>
+    <task id="LOCAL-00006" summary="Добавлен телеграмм бот">
+      <created>1540321407618</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1538541564787</updated>
+      <updated>1540321407618</updated>
     </task>
-    <task id="LOCAL-00007" summary="Добавлен конструктор к боту, принимающий PrintStream и InputStream и переделаны тесты">
-      <created>1539008875216</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1539008875217</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Добавлено 2 теста и исправлен класс Bot">
-      <created>1539112771144</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1539112771145</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BotTest_testTransferNote_WrongFormat - 2018.10.07 at 21h 41m 14s.xml">
-      <configuration name="BotTest.testTransferNote_WrongFormat" configurationId="JUnit" />
+    <history-entry file="AddTaskTest - 2018.10.23 at 23h 15m 48s.xml">
+      <configuration name="AddTaskTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest - 2018.10.07 at 21h 41m 22s.xml">
-      <configuration name="BotTest" configurationId="JUnit" />
+    <history-entry file="FileWorkerTest - 2018.10.23 at 23h 16m 34s.xml">
+      <configuration name="FileWorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest_testRecalculateEndDate_Default - 2018.10.07 at 21h 42m 25s.xml">
-      <configuration name="BotTest.testRecalculateEndDate_Default" configurationId="JUnit" />
+    <history-entry file="bot_in_Bot - 2018.10.23 at 23h 54m 59s.xml">
+      <configuration name="bot in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest_testGetNotes_Default - 2018.10.07 at 21h 42m 39s.xml">
-      <configuration name="BotTest.testGetNotes_Default" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.23 at 23h 57m 09s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest_testGetNotes_WrongPattern - 2018.10.07 at 21h 43m 23s.xml">
-      <configuration name="BotTest.testGetNotes_WrongPattern" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 00h 26m 40s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest_testGetCorrectDate_Default - 2018.10.07 at 21h 43m 55s.xml">
-      <configuration name="BotTest.testGetCorrectDate_Default" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 00h 28m 51s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest_testGetCorrectDate_WrongFormat - 2018.10.07 at 21h 44m 08s.xml">
-      <configuration name="BotTest.testGetCorrectDate_WrongFormat" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 00h 29m 43s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest - 2018.10.07 at 21h 44m 50s.xml">
-      <configuration name="BotTest" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 00h 34m 03s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest - 2018.10.08 at 19h 24m 02s.xml">
-      <configuration name="BotTest" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 00h 34m 48s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BotTest - 2018.10.10 at 00h 16m 49s.xml">
-      <configuration name="BotTest" configurationId="JUnit" />
+    <history-entry file="All_in_Bot - 2018.10.24 at 01h 09m 45s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -702,8 +787,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.12059765" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.122732125" />
       <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -711,16 +797,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.30942184" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.248394" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30942184" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49519745" visible="true" weight="0.31798714" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4994664" weight="0.32762313" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.248394" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.3961456" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.2901499" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -728,8 +814,36 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.18381241" />
+      <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.13934426" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.24918033" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30942184" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.31798714" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4994664" weight="0.29016393" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -748,22 +862,12 @@
           <value>
             <State>
               <option name="LONG_EDGES_VISIBLE" value="true" />
+              <option name="BEK_SORT_TYPE" value="1" />
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -787,10 +891,10 @@
     <MESSAGE value="Added FileWorker class and 2 operations" />
     <MESSAGE value="Добавлен класс MyMap и доделан метод поиска конфликтов" />
     <MESSAGE value="Удаление лишней папки?" />
-    <MESSAGE value="Исправлено DisplayListOfNotesch" />
-    <MESSAGE value="Добавлен конструктор к боту, принимающий PrintStream и InputStream и переделаны тесты" />
-    <MESSAGE value="Добавлено 2 теста и исправлен класс Bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено 2 теста и исправлен класс Bot" />
+    <MESSAGE value="Добавлены классы для каждой команды" />
+    <MESSAGE value="Добавлен телеграмм бот" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен телеграмм бот" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/internal/LinkedTreeMap.class">
@@ -801,26 +905,150 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ilnur.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
+    <entry file="file://$PROJECT_DIR$/1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bot.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Names.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/AddNotes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/RemodeNote.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/RemoveNotesOfDayMonthYear.java" />
+    <entry file="file://$PROJECT_DIR$/Log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/DateWorkerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/RemoveTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/main/java/bot/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/main/java/bot/MyMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/test/java/bot/BotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/test/java/bot/FileWorkerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/main/java/bot/FileWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/Log.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../telegram/Bot/src/main/java/bot/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/MyMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="60">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -828,20 +1056,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/AddTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bot/FileWorkerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="405">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,7 +1068,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/FileWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="135">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -858,31 +1076,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Log.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/DateWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="870">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/CheckTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="45">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/UserInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="164" column="8" lean-forward="true" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+        <state relative-caret-position="555">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-615">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/TransferTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/AddTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/RemoveTasksTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="108" column="1" selection-end-line="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/TransferTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -891,8 +1176,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+        <state relative-caret-position="82">
+          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/GetTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -956,6 +1261,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

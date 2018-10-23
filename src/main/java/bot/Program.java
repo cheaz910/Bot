@@ -6,7 +6,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Program {
     public static void main(String[] argv){
-        ApiContextInitializer.init(); // Инициализируем апи
+        ApiContextInitializer.init();
         TelegramBotsApi botapi = new TelegramBotsApi();
         try {
             botapi.registerBot(new TelegramBot());
