@@ -1,12 +1,12 @@
-package bot;
+package FileWorker;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
-class FileWorker {
-    static String ReadFile(String nameOfFile) {
+public class FileWorker {
+    public static String ReadFile(String nameOfFile) {
         String result = "";
         try {
             result = new String(Files.readAllBytes(Paths.get(nameOfFile)));
@@ -16,7 +16,7 @@ class FileWorker {
         return result;
     }
 
-    static void WriteFile(String nameOfFile, String text) {
+    public static void WriteFile(String nameOfFile, String text) {
         try (FileWriter writer = new FileWriter(nameOfFile))
         {
             writer.write(text + "\n");

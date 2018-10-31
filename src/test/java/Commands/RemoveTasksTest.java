@@ -1,5 +1,8 @@
-package bot;
+package Commands;
 
+import Commands.DateWorker;
+import Commands.RemoveTasks;
+import Data.Log;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

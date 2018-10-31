@@ -1,4 +1,6 @@
-package bot;
+package Commands;
+
+import Data.Log;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 public class GetTasks {
-    static String help(String interval) {
+    public static String help(String interval) {
         switch (interval) {
             case "день":
                 return getHelp("день", "dd.MM.yyyy");
@@ -22,7 +24,7 @@ public class GetTasks {
                 "Формат ввода: " + pattern;
     }
 
-    static void doCommand(String strDate, Map<String, Log> log, String pattern, PrintStream outputStream){
+    public static void doCommand(String strDate, Map<String, Log> log, String pattern, PrintStream outputStream){
         ArrayList<Log> notesForDay = getTasks(strDate, log, pattern, outputStream);
         displayListOfNotes(notesForDay, outputStream);
     }

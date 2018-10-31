@@ -1,18 +1,20 @@
-package bot;
+package Commands;
+
+import Data.Log;
 
 import java.io.PrintStream;
 import java.util.Date;
 import java.util.Map;
 
 public class AddTask {
-    static String help() {
+    public static String help() {
         return "Введите через пробел событие, дату начала и продолжительность события.\n" +
                 "Формат ввода: событие HH:mm-dd.MM.yyyy HH:mm,\n" +
                 "          или событие HH:mm-dd.MM HH:mm,\n" +
                 "          или событие HH:mm-dd HH:mm";
     }
 
-    static void doCommand(String task, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void doCommand(String task, Map<String, Log> tasks, PrintStream outputStream) {
         String[] info = task.split(" ");
         if (info.length < 3){
             outputStream.println("Неверный формат ввода: " + task);

@@ -2,6 +2,10 @@ package bot;
 
 import java.io.PrintStream;
 import java.util.*;
+
+import FileWorker.FileWorker;
+import Data.Log;
+import Data.MyMap;
 import com.google.gson.Gson;
 
 class Bot {

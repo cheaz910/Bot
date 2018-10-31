@@ -1,5 +1,8 @@
 package bot;
 
+import Commands.*;
+import Data.Log;
+import Data.UserInfo;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -16,8 +19,8 @@ import java.util.List;
 
 class TelegramBot extends TelegramLongPollingBot {
     Bot bot;
-    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private PrintStream outputStream = new PrintStream(outContent);
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    public PrintStream outputStream = new PrintStream(outContent);
     private PrintStream console = System.out;
     private Map<String, UserInfo> usersInfo = new HashMap<>();
     private static final Map<String, String> responses = new HashMap<String, String> () {{
@@ -32,13 +35,10 @@ class TelegramBot extends TelegramLongPollingBot {
         put("выполнено", CheckTask.help());
     }};
 
-
     TelegramBot() {
         this.bot = new Bot(outputStream);
         console.println("Бот загрузился");
     }
-
-
 
     private synchronized void setButtons(SendMessage sendMessage) {
         // Создаем клавиуатуру
@@ -63,7 +63,7 @@ class TelegramBot extends TelegramLongPollingBot {
         replyKeyboardMarkup.setKeyboard(keyboard);
     }
 
-    private void processCommand(String command, Update update) {
+    synchronized void processCommand(String command, Update update) {
         String chatId = update.getMessage().getChatId().toString();
         if (!usersInfo.containsKey(chatId)) {
             usersInfo.put(chatId, new UserInfo(chatId));
@@ -83,6 +83,7 @@ class TelegramBot extends TelegramLongPollingBot {
         }
 
         Map<String, Log> log = bot.getLogForUser(chatId, bot.logAllUsers);
+        command = command.toLowerCase().trim();
         String argument = command;
 
         if (userInfo.stage > 0) {
@@ -100,7 +101,7 @@ class TelegramBot extends TelegramLongPollingBot {
             }
         }
 
-        switch(command) {
+        switch(command  ) {
             case "/start":
                 if (userInfo.stage == 0) {
                     userInfo.isStarted = true;

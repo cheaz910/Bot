@@ -1,4 +1,6 @@
-package bot;
+package Commands;
+
+import Data.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

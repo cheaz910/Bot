@@ -1,5 +1,6 @@
-package bot;
+package FileWorker;
 
+import FileWorker.FileWorker;
 import org.junit.Test;
 import java.io.File;
 import static org.junit.Assert.*;

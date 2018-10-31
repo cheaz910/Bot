@@ -1,4 +1,6 @@
-package bot;
+package Commands;
+
+import Data.Log;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 public class RemoveTasks {
-    static String help(String interval) {
+    public static String help(String interval) {
         switch (interval) {
             case "":
                 return "Введите дату начала события.\n" +
@@ -29,7 +31,7 @@ public class RemoveTasks {
                 "Формат ввода: " + pattern;
     }
 
-    static void removeOneTask(String strDate, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void removeOneTask(String strDate, Map<String, Log> tasks, PrintStream outputStream) {
         Date date = DateWorker.complementDate(strDate);
         if (date == null) {
             outputStream.println("Неверный формат даты: " + strDate);
@@ -44,7 +46,7 @@ public class RemoveTasks {
         outputStream.println("Событие удалено");
     }
 
-    static void removeTasksOfDayMonthYear(String strDate, Map<String, Log> tasks, String pattern, PrintStream outputStream) {
+    public static void removeTasksOfDayMonthYear(String strDate, Map<String, Log> tasks, String pattern, PrintStream outputStream) {
         Date date = DateWorker.getCorrectDate(strDate, pattern);
         if (date == null) {
             outputStream.println("Неверный формат даты: " + strDate);

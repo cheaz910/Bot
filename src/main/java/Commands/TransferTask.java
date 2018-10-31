@@ -1,16 +1,18 @@
-package bot;
+package Commands;
+
+import Data.Log;
 
 import java.io.PrintStream;
 import java.util.Date;
 import java.util.Map;
 
 public class TransferTask {
-    static String help() {
+    public static String help() {
         return "Введите сначала дату, с которой нужно перенести, затем дату, на которую нужно перенести.\n" +
                 "Формат ввода дат: HH:mm-dd.MM.yyyy, HH:mm-dd.MM HH:mm-dd.MM, HH:mm-dd";
     }
 
-    static void doCommand(String dates, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void doCommand(String dates, Map<String, Log> tasks, PrintStream outputStream) {
         String[] info = dates.split(" ");
         if (info.length != 2){
             outputStream.println("Неверный формат ввода");

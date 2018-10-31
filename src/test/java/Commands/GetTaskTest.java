@@ -1,5 +1,8 @@
-package bot;
+package Commands;
 
+import Commands.AddTask;
+import Commands.GetTasks;
+import Data.Log;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

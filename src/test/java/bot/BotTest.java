@@ -1,6 +1,9 @@
 package bot;
 
 import static org.junit.Assert.*;
+
+import Commands.AddTask;
+import Data.Log;
 import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

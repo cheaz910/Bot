@@ -1,10 +1,10 @@
-package bot;
+package Commands;
 
 
+import Commands.DateWorker;
+import Data.Log;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
