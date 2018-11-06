@@ -2,7 +2,6 @@ package bot;
 
 import java.io.PrintStream;
 import java.util.*;
-
 import FileWorker.FileWorker;
 import Data.Log;
 import Data.MyMap;

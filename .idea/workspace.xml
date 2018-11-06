@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="Добавлена команда с праздниками">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Commands/GetHolidays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Log.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Program.class" beforeDir="false" />
+    <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,7 +98,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="60" />
+          <entry key="java" value="70" />
           <entry key="md" value="1" />
           <entry key="txt" value="6" />
           <entry key="xml" value="1" />
@@ -105,7 +107,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="70" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="XML" value="1" />
         </counts>
@@ -113,13 +115,13 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3385" />
+          <entry key="java" value="4032" />
           <entry key="txt" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3385" />
+          <entry key="JAVA" value="4032" />
           <entry key="PLAIN_TEXT" value="75" />
         </counts>
       </usages-collector>
@@ -130,8 +132,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="71" lean-forward="true" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="71" />
+            <state relative-caret-position="272">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,17 +144,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="212">
+              <caret line="125" column="88" lean-forward="true" selection-start-line="125" selection-start-column="88" selection-end-line="125" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,10 +154,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="51">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,10 +166,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="65" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="65" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,6 +192,9 @@
       <find>File</find>
       <find>RemoveNotesOfDayMonthYear</find>
       <find>getChat</find>
+      <find>sendMsg</find>
+      <find>log</find>
+      <find>Bot</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -217,7 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/bot/FileWorker.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/bot/AddNotes.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/RemodeNote.java" />
@@ -236,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/main/java/bot/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/TransferTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/RemoveTasks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/DateWorker.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/TransferTaskTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
@@ -257,17 +257,19 @@
         <option value="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/FileWorker/FileWorkerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/TelegramBotTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/GetHolidays.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" />
       </list>
     </option>
   </component>
@@ -479,7 +481,7 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="Chat&#9;PSI&#9;JAVA://org.telegram.telegrambots.meta.api.objects.Chat&#10;Message&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/guice-4.1.0.jar!/com/google/inject/spi/Message.class&#10;Update&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Update.class" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541538572048" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541543699011" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -671,13 +673,17 @@
       <option name="project" value="LOCAL" />
       <updated>1540321407618</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавлена команда с праздниками">
+      <created>1541538629074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541538629075</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 33m 11s.xml">
-      <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 33m 42s.xml">
       <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
     </history-entry>
@@ -705,6 +711,9 @@
     <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 56m 32s.xml">
       <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.11.07 at 00h 09m 33s.xml">
+      <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,15 +737,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" weight="0.24756756" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.07704918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39891893" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.248394" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.3957219" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.28972974" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.06557377" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.2885246" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -746,34 +755,6 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.1283896" />
-      <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.24756756" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.248394" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.3957219" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.28972974" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -828,13 +809,6 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/internal/LinkedTreeMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ilnur.xml" />
     <entry file="file://$PROJECT_DIR$/1.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -892,17 +866,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Data/MyMap.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/FileWorker/FileWorker.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Data/UserInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/FileWorker/FileWorkerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java" />
     <entry file="jar://$PROJECT_DIR$/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Update.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -963,27 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="71" lean-forward="true" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -994,17 +942,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="65" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="true" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" selection-start-line="18" selection-end-line="28" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Data/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="867">
+          <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1013,8 +1039,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+        <state relative-caret-position="212">
+          <caret line="125" column="88" lean-forward="true" selection-start-line="125" selection-start-column="88" selection-end-line="125" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

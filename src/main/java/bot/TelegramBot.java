@@ -3,6 +3,7 @@ package bot;
 import Commands.*;
 import Data.Log;
 import Data.UserInfo;
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -16,15 +17,15 @@ import java.io.PrintStream;
 import java.util.*;
 import java.util.List;
 
-
 class TelegramBot extends TelegramLongPollingBot {
     Bot bot;
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public PrintStream outputStream = new PrintStream(outContent);
     private PrintStream console = System.out;
     private Map<String, UserInfo> usersInfo = new HashMap<>();
-    private static final Map<String, String> responses = new HashMap<String, String> () {{
+    private static final Map<String, String> responses = new HashMap<String, String>() {{
         put("+", AddTask.help());
+        put("+ группе", AddTaskGroup.help());
         put("-", RemoveTasks.help(""));
         put("перенести", TransferTask.help());
         put("день", GetTasks.help("день"));
@@ -102,7 +103,7 @@ class TelegramBot extends TelegramLongPollingBot {
             }
         }
 
-        switch(command  ) {
+        switch(command) {
             case "/start":
                 if (userInfo.stage == 0) {
                     userInfo.isStarted = true;
@@ -120,6 +121,9 @@ class TelegramBot extends TelegramLongPollingBot {
                 break;
             case "+":
                 AddTask.doCommand(argument, log, outputStream);
+                break;
+            case "+ группе":
+                AddTaskGroup.doCommand(argument, chatId, bot.logAllUsers, outputStream);
                 break;
             case "-":
                 RemoveTasks.removeOneTask(argument, log, outputStream);

@@ -36,7 +36,7 @@ public class GetHolidays {
             if (DateWorker.getCorrectDate(strDate, "dd.MM") == null) {
                 outputStream.println("Неверный формат ввода: " + strDate);
                 return;
-            };
+            }
             String url = getUrl(strDate);
             String content = GetHolidays.getContent(url);
             ArrayList<String> holidays = GetHolidays.getHolidays(content);
