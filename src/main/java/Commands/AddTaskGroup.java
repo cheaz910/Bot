@@ -22,15 +22,19 @@ public class AddTaskGroup {
             return;
         }
         String task = taskAndUsers[0];
-        AddTask.doCommand(task, logAllUsers.get(chatId), outputStream);
+        synchronized (logAllUsers) {
+            AddTask.doCommand(task, logAllUsers.get(chatId), outputStream);
+        }
         String strUsers = taskAndUsers[1];
         String[] users = strUsers.split(" ");
         for (String user : users) {
-            AddTask.doCommand(task, logAllUsers.get(user), outputStream);//сообщения о добавлении будут отправляться одному пользователю
+            synchronized (logAllUsers) {
+                AddTask.doCommand(task, logAllUsers.get(user), outputStream); // сообщения о добавлении будут отправляться одному пользователю
+            }
         }
     }
 
-    public static String[] GetTaskAndUsers(String command) {
+    static String[] GetTaskAndUsers(String command) {
         Pattern pattern = Pattern.compile("(.+:\\d\\d) (.+)");
         Matcher matcher = pattern.matcher(command);
         String[] result = new String[2];

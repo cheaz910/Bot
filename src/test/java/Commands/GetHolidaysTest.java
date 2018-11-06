@@ -10,7 +10,7 @@ public class GetHolidaysTest {
     public final void testDefault() { // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream outputStream = new PrintStream(outContent);
-        GetHolidays.doCommand("01.11", outputStream);
+        GetHolidays.doCommand("11.11", outputStream);
         assertEquals("Международный день энергосбережения\n" +
                 "День офтальмолога\n" +
                 "День окончания Первой мировой войны\n" +
@@ -23,7 +23,7 @@ public class GetHolidaysTest {
     public final void testWrongFormat() { // Неверный формат даты
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream outputStream = new PrintStream(outContent);
-        GetHolidays.doCommand("01.16", outputStream);
-        assertEquals("Неверный формат ввода: 01.16\n", outContent.toString());
+        GetHolidays.doCommand("0116", outputStream);
+        assertEquals("Неверный формат ввода: 0116\n", outContent.toString());
     }
 }

@@ -2,14 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_admin_6_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/animal-sniffer-annotations-1.17-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/animal-sniffer-annotations-1.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api-common-1.7.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api-common-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/auto-value-1.4-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/auto-value-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/checker-qual-2.5.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/checker-qual-2.5.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.10-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/error_prone_annotations-2.1.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/error_prone_annotations-2.1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/error_prone_annotations-2.2.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/error_prone_annotations-2.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/failureaccess-1.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/failureaccess-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase-admin-6.5.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase-admin-6.5.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-1.30.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-1.30.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-grpc-1.30.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-grpc-1.30.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-httpjson-0.47.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gax-httpjson-0.47.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-client-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-client-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-client-gson-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-client-gson-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-services-storage-v1-rev135-1.24.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-api-services-storage-v1-rev135-1.24.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-auth-library-credentials-0.11.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-auth-library-credentials-0.11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-auth-library-oauth2-http-0.11.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-auth-library-oauth2-http-0.11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-1.43.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-1.43.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-grpc-1.43.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-grpc-1.43.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-http-1.43.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-core-http-1.43.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-firestore-0.61.0-beta-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-firestore-0.61.0-beta.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-storage-1.43.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-cloud-storage-1.43.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-appengine-1.24.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-appengine-1.24.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-gson-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-gson-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-jackson-1.24.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-jackson-1.24.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-jackson2-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-http-client-jackson2-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-oauth-client-1.25.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/google-oauth-client-1.25.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-auth-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-auth-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-context-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-context-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-core-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-core-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-netty-shaded-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-netty-shaded-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-protobuf-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-protobuf-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-protobuf-lite-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-protobuf-lite-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-stub-1.13.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/grpc-stub-1.13.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gson-2.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gson-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-20.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-20.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-27.0-jre-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/guava-27.0-jre.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpclient-4.5.5-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpclient-4.5.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpcore-4.4.9-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpcore-4.4.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/j2objc-annotations-1.1-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/j2objc-annotations-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.9.6-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.9.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-asl-1.9.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/joda-time-2.9.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/joda-time-2.9.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsr305-3.0.2-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsr305-3.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-buffer-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-buffer-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-codec-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-codec-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-codec-http-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-codec-http-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-common-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-common-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-handler-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-handler-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-resolver-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-resolver-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-transport-4.1.22.Final-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/netty-transport-4.1.22.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-api-0.15.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-api-0.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-grpc-metrics-0.12.3-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-grpc-metrics-0.12.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-grpc-util-0.15.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-grpc-util-0.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-http-util-0.15.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opencensus-contrib-http-util-0.15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-cloud-firestore-v1beta1-0.26.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-cloud-firestore-v1beta1-0.26.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-common-protos-1.12.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-common-protos-1.12.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-iam-v1-0.12.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/proto-google-iam-v1-0.12.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-3.6.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-3.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-util-3.6.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-util-3.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/slf4j-api-1.7.25-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/threetenbp-1.3.3-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/threetenbp-1.3.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicekey.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Firebase/Firebase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_telegram_telegrambots_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/org_telegram_telegrambots_4_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,39 +179,41 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="10" />
-          <entry key="java" value="209" />
+          <entry key="class" value="15" />
+          <entry key="java" value="262" />
           <entry key="txt" value="5" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="10" />
-          <entry key="JAVA" value="209" />
+          <entry key="CLASS" value="15" />
+          <entry key="JAVA" value="262" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16328" />
+          <entry key="java" value="16644" />
           <entry key="txt" value="240" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16328" />
+          <entry key="JAVA" value="16644" />
           <entry key="PLAIN_TEXT" value="240" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="1" />
+          <entry key="git.branch.checkout.local" value="4" />
+          <entry key="git.branch.checkout.with.rebase" value="1" />
           <entry key="git.branch.compare" value="1" />
           <entry key="git.branch.merge" value="2" />
+          <entry key="git.branch.rebase" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -132,34 +267,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="125" column="88" lean-forward="true" selection-start-line="125" selection-start-column="88" selection-end-line="125" selection-end-column="88" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1668#1669#0" expanded="true" />
+                <element signature="e#1727#1728#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,8 +280,86 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="133">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Firebase/Firebase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,15 +401,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="telegrambot" />
+        <entry key="$PROJECT_DIR$" value="3c718c1b6d5032b45db0ef0a176fafed209b0859" />
       </map>
     </option>
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/bot/AddNotes.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/RemodeNote.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/RemoveNote.java" />
@@ -239,7 +428,6 @@
         <option value="$PROJECT_DIR$/src/main/java/bot/RemoveTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/DateWorker.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/TransferTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/GetTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/MyMap.java" />
@@ -247,11 +435,9 @@
         <option value="$PROJECT_DIR$/src/main/java/bot/AddTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/CheckTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/DateWorker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Data/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/Data/MyMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileWorker/FileWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/Data/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
@@ -265,11 +451,15 @@
         <option value="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Data/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Firebase/Firebase.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java" />
       </list>
     </option>
   </component>
@@ -389,8 +579,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -401,6 +591,11 @@
             <path>
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -436,44 +631,13 @@
               <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,10 +645,10 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="Chat&#9;PSI&#9;JAVA://org.telegram.telegrambots.meta.api.objects.Chat&#10;Message&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/guice-4.1.0.jar!/com/google/inject/spi/Message.class&#10;Update&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Update.class" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541543699011" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541542744246" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -516,7 +680,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="JUnit.GetHolidaysTest.testDefault">
     <configuration name="Program" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -542,6 +706,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BotTest.testGetLogForUser_OldUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.BotTest" />
+      <option name="METHOD_NAME" value="testGetLogForUser_OldUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetHolidaysTest.testDefault" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Commands.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Commands" />
+      <option name="MAIN_CLASS_NAME" value="Commands.GetHolidaysTest" />
+      <option name="METHOD_NAME" value="testDefault" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TelegramBotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bot" />
       <extension name="coverage">
@@ -552,22 +748,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="bot" />
       <option name="MAIN_CLASS_NAME" value="bot.TelegramBotTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TelegramBotTest.testGetLogForUser_NewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bot" />
-      <option name="MAIN_CLASS_NAME" value="bot.TelegramBotTest" />
-      <option name="METHOD_NAME" value="testGetLogForUser_NewUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -588,35 +768,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="bot in Bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FileWorker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bot" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Program" />
-      <item itemvalue="JUnit.bot in Bot" />
       <item itemvalue="JUnit.All in Bot" />
-      <item itemvalue="JUnit.TelegramBotTest.testGetLogForUser_NewUser" />
       <item itemvalue="JUnit.TelegramBotTest.testTelegramBot_TwoUsers" />
       <item itemvalue="JUnit.TelegramBotTest" />
+      <item itemvalue="JUnit.BotTest.testGetLogForUser_OldUser" />
+      <item itemvalue="JUnit.GetHolidaysTest.testDefault" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GetHolidaysTest.testDefault" />
+        <item itemvalue="JUnit.All in Bot" />
+        <item itemvalue="JUnit.BotTest.testGetLogForUser_OldUser" />
         <item itemvalue="JUnit.TelegramBotTest.testTelegramBot_TwoUsers" />
         <item itemvalue="JUnit.TelegramBotTest" />
-        <item itemvalue="JUnit.All in Bot" />
-        <item itemvalue="JUnit.TelegramBotTest.testGetLogForUser_NewUser" />
-        <item itemvalue="JUnit.bot in Bot" />
       </list>
     </recent_temporary>
   </component>
@@ -684,18 +850,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 33m 42s.xml">
-      <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 34m 04s.xml">
-      <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 34m 32s.xml">
-      <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TelegramBotTest - 2018.10.31 at 09h 34m 44s.xml">
-      <configuration name="TelegramBotTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.10.31 at 09h 35m 30s.xml">
       <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
     </history-entry>
@@ -714,6 +868,18 @@
     <history-entry file="TelegramBotTest_testTelegramBot_TwoUsers - 2018.11.07 at 00h 09m 33s.xml">
       <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_Bot - 2018.11.07 at 03h 15m 37s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BotTest_testGetLogForUser_OldUser - 2018.11.07 at 03h 17m 41s.xml">
+      <configuration name="BotTest.testGetLogForUser_OldUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Bot - 2018.11.07 at 03h 18m 06s.xml">
+      <configuration name="All in Bot" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GetHolidaysTest_testDefault - 2018.11.07 at 03h 19m 18s.xml">
+      <configuration name="GetHolidaysTest.testDefault" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -725,10 +891,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.20801815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.1339381" />
       <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -737,7 +903,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.07704918" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.4021102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39891893" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -745,7 +911,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.248394" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.06557377" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.2885246" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.2883939" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -755,6 +921,34 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.1283896" />
+      <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.24756756" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32869378" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994664" weight="0.32869378" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.248394" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49839914" weight="0.3957219" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49626467" weight="0.28972974" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -809,7 +1003,6 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ilnur.xml" />
     <entry file="file://$PROJECT_DIR$/1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -867,7 +1060,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Data/MyMap.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/FileWorker/FileWorker.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" />
@@ -884,16 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4012">
           <caret line="321" selection-start-line="321" selection-end-line="321" />
-          <folding>
-            <element signature="e#10126#10127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Chat.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -911,34 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/guice-4.1.0.jar!/com/google/inject/spi/Message.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Data/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,54 +1131,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="72" column="52" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Chat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Data/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="514">
           <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-323">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Firebase/Firebase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="553">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1029,21 +1191,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="125" column="88" lean-forward="true" selection-start-line="125" selection-start-column="88" selection-end-line="125" selection-end-column="88" />
+        <state relative-caret-position="323">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/GetHolidaysTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/TelegramBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -38,7 +38,9 @@ public class AddTask {
             outputStream.println("На это время уже запланировано событие");
             return;
         }
-        tasks.put(DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy"), newLog);
+        synchronized (tasks) {
+            tasks.put(DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy"), newLog);
+        }
         outputStream.println("Событие добавлено");
     }
 }

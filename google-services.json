@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "77645103616",
+    "firebase_url": "https://telegrambot-46b3f.firebaseio.com",
+    "project_id": "telegrambot-46b3f",
+    "storage_bucket": "telegrambot-46b3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77645103616:android:5bb85f696884ae7b",
+        "android_client_info": {
+          "package_name": "Telegram.Bot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77645103616-cbd8u58lvjinme1g7am8s4ro5q3n8vfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfH156pDIjC_VAG8Fy09z1tyIkaA5eVPo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

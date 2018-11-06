@@ -16,6 +16,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 class TelegramBot extends TelegramLongPollingBot {
     Bot bot;
@@ -38,7 +41,15 @@ class TelegramBot extends TelegramLongPollingBot {
     }};
 
     TelegramBot() {
-        this.bot = new Bot(outputStream);
+        this.bot = new Bot();
+        ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
+        exec.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                bot.saveInfo();
+                console.println("Uploaded to DB");
+            }
+        }, 0, 20, TimeUnit.SECONDS);
         console.println("Бот загрузился");
     }
 
