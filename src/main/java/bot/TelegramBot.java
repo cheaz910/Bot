@@ -32,6 +32,7 @@ class TelegramBot extends TelegramLongPollingBot {
         put("-день", RemoveTasks.help("день"));
         put("-месяц", RemoveTasks.help("месяц"));
         put("-год", RemoveTasks.help("год"));
+        put("праздники", GetHolidays.help());
         put("выполнено", CheckTask.help());
     }};
 
@@ -140,6 +141,9 @@ class TelegramBot extends TelegramLongPollingBot {
                 break;
             case "-год":
                 RemoveTasks.removeTasksOfDayMonthYear(argument, log, "yyyy", outputStream);
+                break;
+            case "праздники":
+                GetHolidays.doCommand(argument, outputStream);
                 break;
             case "выполнено":
                 CheckTask.doCommand(argument, log, outputStream);
