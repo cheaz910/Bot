@@ -45,10 +45,11 @@ public class GetHolidays {
             }
         }
         catch(IOException ex) {
+            ex.printStackTrace();
         }
     }
 
-    public static String getUrl(String strDate){
+    private static String getUrl(String strDate){
         String day = strDate.charAt(0) == '0' ? strDate.substring(1, 2) : strDate.substring(0, 2);
         String month = months.get(strDate.substring(3, 5));
         return "https://my-calend.ru/holidays/russia/" + day + "-" + month;
@@ -70,7 +71,7 @@ public class GetHolidays {
         return sb.toString();
     }
 
-    public static ArrayList<String> getHolidays(String text){
+    private static ArrayList<String> getHolidays(String text){
         String contentWithHolidays = getContentWithHolidays(text);
         if (contentWithHolidays == null){
             return new ArrayList<>();
@@ -85,7 +86,7 @@ public class GetHolidays {
 
     }
 
-    public static String getContentWithHolidays(String text) {
+    private static String getContentWithHolidays(String text) {
         Pattern pattern = Pattern.compile("<ul class=\"holidays-items\">.+?<div class=\"near\">");
         Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {

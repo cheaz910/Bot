@@ -4,6 +4,7 @@ import Data.Log;
 
 import java.io.PrintStream;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,22 +16,21 @@ public class AddTaskGroup {
                 "          или событие HH:mm-dd HH:mm user1 user2...";
     }
 
-    public static void doCommand(String command, String chatId, Map<String, Map<String, Log>> logAllUsers, PrintStream outputStream) {
+    public static void doCommand(String command,
+                                 String chatId,
+                                 ConcurrentHashMap<String, ConcurrentHashMap<String, Log>> logAllUsers,
+                                 PrintStream outputStream) {
         String[] taskAndUsers = GetTaskAndUsers(command);
         if (taskAndUsers == null){
             outputStream.println("Неверный формат ввода: " + command);
             return;
         }
         String task = taskAndUsers[0];
-        synchronized (logAllUsers) {
-            AddTask.doCommand(task, logAllUsers.get(chatId), outputStream);
-        }
+        AddTask.doCommand(task, logAllUsers.get(chatId), outputStream);
         String strUsers = taskAndUsers[1];
         String[] users = strUsers.split(" ");
         for (String user : users) {
-            synchronized (logAllUsers) {
-                AddTask.doCommand(task, logAllUsers.get(user), outputStream); // сообщения о добавлении будут отправляться одному пользователю
-            }
+            AddTask.doCommand(task, logAllUsers.get(user), outputStream); // сообщения о добавлении будут отправляться одному пользователю
         }
     }
 

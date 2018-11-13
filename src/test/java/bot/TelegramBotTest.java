@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TelegramBotTest {
     Update GetUpdateById(Long id) {
@@ -43,7 +44,7 @@ public class TelegramBotTest {
         final TelegramBot botapi = new TelegramBot();
         final Update update1 = GetUpdateById(1L);
         final Update update2 = GetUpdateById(2L);
-        botapi.bot.logAllUsers = new HashMap<>();
+        botapi.bot.logAllUsers = new ConcurrentHashMap<>();
 
         Thread thread1 = new Thread() {
             public void run() {

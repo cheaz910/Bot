@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class DateWorker {
     static Date getCorrectDate(String strDate, String pattern) {
@@ -70,7 +71,7 @@ public class DateWorker {
         return format.format(date);
     }
 
-    static boolean isConflict(Map<String, Log> tasks, Log newLog) {
+    static boolean isConflict(ConcurrentHashMap<String, Log> tasks, Log newLog) {
         for (Log log : tasks.values()) {
             if (DateWorker.doNotesIntersect(log.startDate, log.endDate, newLog.startDate, newLog.endDate)){
                 return true;

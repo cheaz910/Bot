@@ -5,6 +5,7 @@ import Data.Log;
 import java.io.PrintStream;
 import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class AddTask {
     public static String help() {
@@ -14,7 +15,7 @@ public class AddTask {
                 "          или событие HH:mm-dd HH:mm";
     }
 
-    public static void doCommand(String task, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void doCommand(String task, ConcurrentHashMap<String, Log> tasks, PrintStream outputStream) {
         String[] info = task.split(" ");
         if (info.length < 3){
             outputStream.println("Неверный формат ввода: " + task);
@@ -38,8 +39,9 @@ public class AddTask {
             outputStream.println("На это время уже запланировано событие");
             return;
         }
-        synchronized (tasks) {
-            tasks.put(DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy"), newLog);
+        String key = DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy");
+        while (!tasks.containsKey(key)) {
+            tasks.put(key, newLog);
         }
         outputStream.println("Событие добавлено");
     }

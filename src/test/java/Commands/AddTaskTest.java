@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -17,7 +18,7 @@ public class AddTaskTest {
     @Test
     public final void testDefault() {   // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand("событие 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("13:40-02.09.2018"));
         Log log = tasks.get("13:40-02.09.2018");
@@ -32,7 +33,7 @@ public class AddTaskTest {
     @Test
     public final void testInputWithoutYear() {   // Входные данные без года
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand("событие 13:40-02.09 12:10", tasks, new PrintStream(outContent));
         int year = Calendar.getInstance().get(Calendar.YEAR);
         String strDate = "13:40-02.09." + year;
@@ -50,7 +51,7 @@ public class AddTaskTest {
     @Test
     public final void testInputWithoutYearAndMonth() {   // Входные данные без года и месяца
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand("событие 13:40-02 12:10", tasks, new PrintStream(outContent));
         int year = Calendar.getInstance().get(Calendar.YEAR);
         int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
@@ -69,7 +70,7 @@ public class AddTaskTest {
     @Test
     public final void testInputWithFewWords() {   // Входные данные с задачей, состоящей из более одного слова
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand("событие1 событие2 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("13:40-02.09.2018"));
         Log log = tasks.get("13:40-02.09.2018");
@@ -83,7 +84,7 @@ public class AddTaskTest {
     @Test
     public final void testСonflictingTasks() {   // конфликтующие события
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand("событие1 13:40-02.09.2018 12:10", tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("13:40-02.09.2018"));
         Log log = tasks.get("13:40-02.09.2018");
@@ -98,7 +99,7 @@ public class AddTaskTest {
     }
 
     private boolean wrongFormat(String command, ByteArrayOutputStream outContent) {
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         AddTask.doCommand(command, tasks, new PrintStream(outContent));
         return tasks.size() == 0;
     }
@@ -125,7 +126,7 @@ public class AddTaskTest {
     @Test
     public final void testBadFormat() { // На входе часы больше 24 (лишние часы должны перейти в дни)
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         String task = "событие 25:40-02.09.2018 01:10";
         AddTask.doCommand(task, tasks, new PrintStream(outContent));
         assertTrue(tasks.containsKey("01:40-03.09.2018"));

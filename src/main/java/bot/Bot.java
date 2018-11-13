@@ -1,16 +1,18 @@
 package bot;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
 import Data.Log;
 import com.google.cloud.firestore.Firestore;
 
 class Bot {
     private Firestore db = Firebase.Firebase.getDB();
-    Map<String, Map<String, Log>> logAllUsers = Firebase.Firebase.gg(db);
+    ConcurrentHashMap<String, ConcurrentHashMap<String, Log>> logAllUsers = Firebase.Firebase.downloadDB(db);
 
-    Map<String, Log> getLogForUser(String nameOfUser, Map<String, Map<String, Log>> log) {
-        if (!log.containsKey(nameOfUser))
-            log.put(nameOfUser, new HashMap());
+    ConcurrentHashMap<String, Log> getLogForUser(String nameOfUser,
+                                                 ConcurrentHashMap<String, ConcurrentHashMap<String, Log>> log) {
+        log.putIfAbsent(nameOfUser, new ConcurrentHashMap<String, Log>());
         return log.get(nameOfUser);
     }
 

@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +26,7 @@ class TelegramBot extends TelegramLongPollingBot {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     public PrintStream outputStream = new PrintStream(outContent);
     private PrintStream console = System.out;
-    private Map<String, UserInfo> usersInfo = new HashMap<>();
+    private ConcurrentHashMap<String, UserInfo> usersInfo = new ConcurrentHashMap<>(); // 2 устройства - 1 пользователь
     private static final Map<String, String> responses = new HashMap<String, String>() {{
         put("+", AddTask.help());
         put("+ группе", AddTaskGroup.help());
@@ -76,105 +77,102 @@ class TelegramBot extends TelegramLongPollingBot {
         replyKeyboardMarkup.setKeyboard(keyboard);
     }
 
-    synchronized void processCommand(String command, Update update) {
+    void processCommand(String command, Update update) {
         String chatId = update.getMessage().getChatId().toString();
-        if (!usersInfo.containsKey(chatId)) {
-            usersInfo.put(chatId, new UserInfo(chatId));
-        }
 
+        usersInfo.putIfAbsent(chatId, new UserInfo(chatId));
         UserInfo userInfo = usersInfo.get(chatId);
-
-        if (command.equals("/stop")) {
-            userInfo.isStarted = false;
-            userInfo.stage = 0;
-            return;
-        }
-
-        if (!userInfo.isStarted && !command.equals("/start")) {
-            outputStream.println("/start?");
-            return;
-        }
-
-        Map<String, Log> log = bot.getLogForUser(chatId, bot.logAllUsers);
-        command = command.toLowerCase().trim();
-        String argument = command;
-
-        if (userInfo.stage > 0) {
-            command = userInfo.previousCommand;
-        }
-
-        if (responses.containsKey(command)) {
-            if (userInfo.stage > 0)
-                userInfo.stage -= 1;
-            else {
-                sendMsg(chatId, responses.get(command));
-                userInfo.stage += 1;
-                userInfo.previousCommand = command;
+        synchronized (userInfo) { // На случай использования 1 аккаунта с 2-х устройств
+            if (command.equals("/stop")) {
+                userInfo.isStarted = false;
+                userInfo.stage = 0;
                 return;
             }
-        }
 
-        switch(command) {
-            case "/start":
-                if (userInfo.stage == 0) {
-                    userInfo.isStarted = true;
-                    outputStream.println("Как вас зовут?");
+            if (!userInfo.isStarted && !command.equals("/start")) {
+                outputStream.println("/start?");
+                return;
+            }
+
+            ConcurrentHashMap<String, Log> log = bot.getLogForUser(chatId, bot.logAllUsers);
+            command = command.toLowerCase().trim();
+            String argument = command;
+
+            if (userInfo.stage > 0) {
+                command = userInfo.previousCommand;
+            }
+
+            if (responses.containsKey(command)) {
+                if (userInfo.stage > 0)
+                    userInfo.stage -= 1;
+                else {
+                    sendMsg(chatId, responses.get(command));
                     userInfo.stage += 1;
                     userInfo.previousCommand = command;
+                    return;
                 }
-                else
-                {
-                    userInfo.name = argument;
-                    userInfo.stage -= 1;
-                    outputStream.println(String.format("Здравствуй, %s!", userInfo.name));
+            }
+
+            switch (command) {
+                case "/start":
+                    if (userInfo.stage == 0) {
+                        userInfo.isStarted = true;
+                        outputStream.println("Как вас зовут?");
+                        userInfo.stage += 1;
+                        userInfo.previousCommand = command;
+                    } else {
+                        userInfo.name = argument;
+                        userInfo.stage -= 1;
+                        outputStream.println(String.format("Здравствуй, %s!", userInfo.name));
+                        outputStream.println(bot.getHelp());
+                    }
+                    break;
+                case "+":
+                    AddTask.doCommand(argument, log, outputStream);
+                    break;
+                case "+ группе":
+                    AddTaskGroup.doCommand(argument, chatId, bot.logAllUsers, outputStream);
+                    break;
+                case "-":
+                    RemoveTasks.removeOneTask(argument, log, outputStream);
+                    break;
+                case "перенести":
+                    TransferTask.doCommand(argument, log, outputStream);
+                    break;
+                case "день":
+                    GetTasks.doCommand(argument, log, "dd.MM.yyyy", outputStream);
+                    break;
+                case "месяц":
+                    GetTasks.doCommand(argument, log, "MM.yyyy", outputStream);
+                    break;
+                case "-день":
+                    RemoveTasks.removeTasksOfDayMonthYear(argument, log, "dd.MM.yyyy", outputStream);
+                    break;
+                case "-месяц":
+                    RemoveTasks.removeTasksOfDayMonthYear(argument, log, "MM.yyyy", outputStream);
+                    break;
+                case "-год":
+                    RemoveTasks.removeTasksOfDayMonthYear(argument, log, "yyyy", outputStream);
+                    break;
+                case "праздники":
+                    GetHolidays.doCommand(argument, outputStream);
+                    break;
+                case "выполнено":
+                    CheckTask.doCommand(argument, log, outputStream);
+                    break;
+                case "спасибо":
+                    outputStream.println("пожалуйста");
+                    break;
+                case "справка":
                     outputStream.println(bot.getHelp());
-                }
-                break;
-            case "+":
-                AddTask.doCommand(argument, log, outputStream);
-                break;
-            case "+ группе":
-                AddTaskGroup.doCommand(argument, chatId, bot.logAllUsers, outputStream);
-                break;
-            case "-":
-                RemoveTasks.removeOneTask(argument, log, outputStream);
-                break;
-            case "перенести":
-                TransferTask.doCommand(argument, log, outputStream);
-                break;
-            case "день":
-                GetTasks.doCommand(argument, log, "dd.MM.yyyy", outputStream);
-                break;
-            case "месяц":
-                GetTasks.doCommand(argument, log, "MM.yyyy", outputStream);
-                break;
-            case "-день":
-                RemoveTasks.removeTasksOfDayMonthYear(argument, log, "dd.MM.yyyy", outputStream);
-                break;
-            case "-месяц":
-                RemoveTasks.removeTasksOfDayMonthYear(argument, log, "MM.yyyy", outputStream);
-                break;
-            case "-год":
-                RemoveTasks.removeTasksOfDayMonthYear(argument, log, "yyyy", outputStream);
-                break;
-            case "праздники":
-                GetHolidays.doCommand(argument, outputStream);
-                break;
-            case "выполнено":
-                CheckTask.doCommand(argument, log, outputStream);
-                break;
-            case "спасибо":
-                outputStream.println("пожалуйста");
-                break;
-            case "справка":
-                outputStream.println(bot.getHelp());
-                break;
-            case "сохранить":
-                bot.saveInfo();
-                break;
-            default:
-                outputStream.println("Неизвестная команда");
-                break;
+                    break;
+                case "сохранить":
+                    bot.saveInfo();
+                    break;
+                default:
+                    outputStream.println("Неизвестная команда");
+                    break;
+            }
         }
     }
 

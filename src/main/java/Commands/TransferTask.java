@@ -5,6 +5,7 @@ import Data.Log;
 import java.io.PrintStream;
 import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TransferTask {
     public static String help() {
@@ -12,7 +13,7 @@ public class TransferTask {
                 "Формат ввода дат: HH:mm-dd.MM.yyyy, HH:mm-dd.MM HH:mm-dd.MM, HH:mm-dd";
     }
 
-    public static void doCommand(String dates, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void doCommand(String dates, ConcurrentHashMap<String, Log> tasks, PrintStream outputStream) {
         String[] info = dates.split(" ");
         if (info.length != 2){
             outputStream.println("Неверный формат ввода");
@@ -32,16 +33,18 @@ public class TransferTask {
             return;
         }
         strNewDate = DateWorker.getCorrectStringFromDate(newDate, "HH:mm-dd.MM.yyyy");
-        String task = tasks.get(strOldDate).task;
-        boolean check = tasks.get(strOldDate).check;
-        Date endDate = DateWorker.recalculateEndDate(oldDate, tasks.get(strOldDate).endDate, newDate);
-        Log newLog = new Log(task, newDate, endDate, check);
+        Log task = tasks.get(strOldDate);
+        boolean check = task.check;
+        Date endDate = DateWorker.recalculateEndDate(oldDate, task.endDate, newDate);
+        Log newLog = new Log(task.task, newDate, endDate, check);
         if (DateWorker.isConflict(tasks, newLog)) {
             outputStream.println("На это время уже запланировано событие");
             return;
         }
         tasks.remove(strOldDate);
-        tasks.put(strNewDate, newLog);
+        while (!tasks.containsKey(strNewDate)) {
+            tasks.put(strNewDate, newLog);
+        }
         outputStream.println("Событие перенесено");
     }
 }

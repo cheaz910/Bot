@@ -10,6 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -19,7 +20,7 @@ public class TransferTaskTest {
     public final void testTransferNote_Default() {   // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream outputStream = new PrintStream(outContent);
-        Map<String, Log> notes = new HashMap<>();
+        ConcurrentHashMap<String, Log> notes = new ConcurrentHashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         AddTask.doCommand(command, notes, outputStream);
         assertEquals("Событие добавлено\n", outContent.toString());
@@ -39,7 +40,7 @@ public class TransferTaskTest {
 
     private boolean WrongFormatTransferNote(String secondCommand, ByteArrayOutputStream outContent) {
         PrintStream outputStream = new PrintStream(outContent);
-        Map<String, Log> notes = new HashMap<>();
+        ConcurrentHashMap<String, Log> notes = new ConcurrentHashMap<>();
         String command = "событие 13:40-02.09.2018 12:10";
         AddTask.doCommand(command, notes, outputStream);
         assertEquals("Событие добавлено\n", outContent.toString());

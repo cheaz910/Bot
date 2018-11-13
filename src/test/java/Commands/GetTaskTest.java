@@ -9,6 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +18,7 @@ public class GetTaskTest {
     public final void testGetNotes_Default() { // Стандартные входные данные
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream outputStream = new PrintStream(outContent);
-        Map<String, Log> tasks = new HashMap<>();
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         String command = "событие 15:30-02.09.2018 01:00";
         AddTask.doCommand(command, tasks, outputStream);
         String secondCommand = "событие 10:30-02.11.2018 01:00";

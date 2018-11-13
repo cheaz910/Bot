@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -58,8 +59,8 @@ public class DateWorkerTest {
         assertEquals(10, endDate.getMinutes());
     }
 
-    private Map<String, Log> getTasks() {
-        Map<String, Log> tasks = new HashMap<>();
+    private ConcurrentHashMap<String, Log> getTasks() {
+        ConcurrentHashMap<String, Log> tasks = new ConcurrentHashMap<>();
         Date strStartDate = DateWorker.getCorrectDate("13:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         Date strEndDate = DateWorker.getCorrectDate("14:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         tasks.put("13:40-02.09.2018", new Log("событие", strStartDate, strEndDate));
@@ -68,7 +69,7 @@ public class DateWorkerTest {
 
     @Test
     public final void testIsConflict_NoIntersection() { // Два события не пересекаются
-        Map<String, Log> tasks = getTasks();
+        ConcurrentHashMap<String, Log> tasks = getTasks();
         Date strStartDate = DateWorker.getCorrectDate("15:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         Date strEndDate = DateWorker.getCorrectDate("16:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         assertTrue(!DateWorker.isConflict(tasks, new Log("событие", strStartDate, strEndDate)));
@@ -77,7 +78,7 @@ public class DateWorkerTest {
 
     @Test
     public final void testIsConflict_OneIntersection() { // События пересекаются в одной точке
-        Map<String, Log> tasks = getTasks();
+        ConcurrentHashMap<String, Log> tasks = getTasks();
         Date strStartDate = DateWorker.getCorrectDate("14:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         Date strEndDate = DateWorker.getCorrectDate("16:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         assertTrue(DateWorker.isConflict(tasks, new Log("событие", strStartDate, strEndDate)));
@@ -86,7 +87,7 @@ public class DateWorkerTest {
 
     @Test
     public final void testIsConflict_Intersection1() { // Конец одного события находится в промежутке другого события
-        Map<String, Log> tasks = getTasks();
+        ConcurrentHashMap<String, Log> tasks = getTasks();
         Date strStartDate = DateWorker.getCorrectDate("14:00-02.09.2018", "HH:mm-dd.MM.yyyy");
         Date strEndDate = DateWorker.getCorrectDate("16:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         assertTrue(DateWorker.isConflict(tasks, new Log("событие", strStartDate, strEndDate)));
@@ -94,7 +95,7 @@ public class DateWorkerTest {
 
     @Test
     public final void testIsConflict_Nesting() { // Одно событие находится в промежутке другого события
-        Map<String, Log> tasks = getTasks();
+        ConcurrentHashMap<String, Log> tasks = getTasks();
         Date strStartDate = DateWorker.getCorrectDate("13:00-02.09.2018", "HH:mm-dd.MM.yyyy");
         Date strEndDate = DateWorker.getCorrectDate("16:40-02.09.2018", "HH:mm-dd.MM.yyyy");
         assertTrue(DateWorker.isConflict(tasks, new Log("событие", strStartDate, strEndDate)));

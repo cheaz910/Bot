@@ -6,6 +6,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class RemoveTasks {
     public static String help(String interval) {
@@ -31,7 +32,9 @@ public class RemoveTasks {
                 "Формат ввода: " + pattern;
     }
 
-    public static void removeOneTask(String strDate, Map<String, Log> tasks, PrintStream outputStream) {
+    public static void removeOneTask(String strDate,
+                                     ConcurrentHashMap<String, Log> tasks,
+                                     PrintStream outputStream) {
         Date date = DateWorker.complementDate(strDate);
         if (date == null) {
             outputStream.println("Неверный формат даты: " + strDate);
