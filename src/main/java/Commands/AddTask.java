@@ -35,14 +35,16 @@ public class AddTask {
         }
         Date endDate = DateWorker.getEndDate(startDate, duration);
         Log newLog = new Log(task.substring(0, task.length()-strStartDate.length()-strDuration.length()-2), startDate, endDate);
-        if (DateWorker.isConflict(tasks, newLog)) {
-            outputStream.println("На это время уже запланировано событие");
-            return;
+        synchronized (tasks) {
+            if (DateWorker.isConflict(tasks, newLog)) {
+                outputStream.println("На это время уже запланировано событие");
+                return;
+            }
+            String key = DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy");
+            while (!tasks.containsKey(key)) {
+                tasks.put(key, newLog);
+            }
+            outputStream.println("Событие добавлено");
         }
-        String key = DateWorker.getCorrectStringFromDate(startDate, "HH:mm-dd.MM.yyyy");
-        while (!tasks.containsKey(key)) {
-            tasks.put(key, newLog);
-        }
-        outputStream.println("Событие добавлено");
     }
 }

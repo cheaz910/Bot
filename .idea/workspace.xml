@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbb66c4-8ece-4b3b-8318-cb99c7a51135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bot/bot/Bot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/DateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/DateWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Firebase/Firebase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Firebase/Firebase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/TelegramBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/BotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bot/TelegramBotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/TelegramBotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +23,7 @@
     <session id="837542613">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -50,19 +32,20 @@
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="4" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="19" />
-          <entry key="java" value="300" />
+          <entry key="java" value="308" />
           <entry key="txt" value="5" />
           <entry key="xml" value="4" />
         </counts>
@@ -70,22 +53,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="19" />
-          <entry key="JAVA" value="300" />
+          <entry key="JAVA" value="308" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="20092" />
-          <entry key="txt" value="273" />
+          <entry key="java" value="21481" />
+          <entry key="txt" value="341" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20092" />
-          <entry key="PLAIN_TEXT" value="273" />
+          <entry key="JAVA" value="21481" />
+          <entry key="PLAIN_TEXT" value="341" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
@@ -149,8 +132,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CheckTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -158,26 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="73" column="80" selection-start-line="73" selection-start-column="80" selection-end-line="73" selection-end-column="80" />
+            <state relative-caret-position="382">
+              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -185,29 +186,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="12" selection-start-line="12" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Firebase/Firebase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            <state relative-caret-position="-54">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,7 +198,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="287">
               <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -227,14 +207,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+            <state relative-caret-position="382">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2951#3329#0" expanded="true" />
+                <element signature="e#3328#3329#0" expanded="true" />
+                <element signature="e#3433#3811#0" expanded="true" />
+                <element signature="e#3810#3811#0" expanded="true" />
+                <element signature="e#4614#4766#0" expanded="true" />
+                <element signature="e#4765#4766#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="128" column="73" selection-start-line="128" selection-start-column="73" selection-end-line="128" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -334,14 +329,14 @@
         <option value="$PROJECT_DIR$/src/test/java/Commands/GetTaskTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/TransferTaskTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/BotTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" />
         <option value="$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/CheckTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Firebase/Firebase.java" />
         <option value="$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/AddTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/GetTasks.java" />
         <option value="$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/TransferTask.java" />
       </list>
     </option>
   </component>
@@ -462,6 +457,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -568,7 +564,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -576,7 +571,7 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="Chat&#9;PSI&#9;JAVA://org.telegram.telegrambots.meta.api.objects.Chat&#10;Message&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/guice-4.1.0.jar!/com/google/inject/spi/Message.class&#10;Update&#9;FILE&#9;jar:///home/ilnur/IdeaProjects/Bot/lib/telegrambots-meta-4.1.jar!/org/telegram/telegrambots/meta/api/objects/Update.class" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542140266493" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542170343531" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -611,7 +606,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ThreadsTest">
+  <component name="RunManager" selected="JUnit.ThreadsTest.testGetTasks">
     <configuration name="Program" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -637,32 +632,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirebaseTest.testGetLogForUser_NewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TelegramBotTest.testTelegramBot_TwoUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Firebase.*" />
+          <option name="PATTERN" value="bot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Firebase" />
-      <option name="MAIN_CLASS_NAME" value="Firebase.FirebaseTest" />
-      <option name="METHOD_NAME" value="testGetLogForUser_NewUser" />
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.TelegramBotTest" />
+      <option name="METHOD_NAME" value="testTelegramBot_TwoUsers" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemoveTasksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Commands.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Commands" />
-      <option name="MAIN_CLASS_NAME" value="Commands.RemoveTasksTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -681,7 +662,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadsTest.testCheckTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ThreadsTest.testAddTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bot" />
       <extension name="coverage">
         <pattern>
@@ -691,7 +672,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="bot" />
       <option name="MAIN_CLASS_NAME" value="bot.ThreadsTest" />
-      <option name="METHOD_NAME" value="testCheckTask" />
+      <option name="METHOD_NAME" value="testAddTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadsTest.testGetTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bot" />
+      <option name="MAIN_CLASS_NAME" value="bot.ThreadsTest" />
+      <option name="METHOD_NAME" value="testGetTasks" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -700,17 +697,17 @@
     <list>
       <item itemvalue="Application.Program" />
       <item itemvalue="JUnit.All in Bot" />
-      <item itemvalue="JUnit.RemoveTasksTest" />
-      <item itemvalue="JUnit.ThreadsTest.testCheckTask" />
-      <item itemvalue="JUnit.FirebaseTest.testGetLogForUser_NewUser" />
       <item itemvalue="JUnit.ThreadsTest" />
+      <item itemvalue="JUnit.TelegramBotTest.testTelegramBot_TwoUsers" />
+      <item itemvalue="JUnit.ThreadsTest.testAddTask" />
+      <item itemvalue="JUnit.ThreadsTest.testGetTasks" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ThreadsTest.testGetTasks" />
+        <item itemvalue="JUnit.ThreadsTest.testAddTask" />
         <item itemvalue="JUnit.ThreadsTest" />
-        <item itemvalue="JUnit.FirebaseTest.testGetLogForUser_NewUser" />
-        <item itemvalue="JUnit.ThreadsTest.testCheckTask" />
-        <item itemvalue="JUnit.RemoveTasksTest" />
+        <item itemvalue="JUnit.TelegramBotTest.testTelegramBot_TwoUsers" />
         <item itemvalue="JUnit.All in Bot" />
       </list>
     </recent_temporary>
@@ -782,39 +779,46 @@
       <option name="project" value="LOCAL" />
       <updated>1541542981698</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Доработана многопоточность и добавлены тесты(многопоточность, БД)">
+      <created>1542140465922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542140465922</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 05m 05s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 15m 35s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 06m 10s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 16m 16s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 08m 34s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 16m 43s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 09m 24s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 17m 09s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 10m 33s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 17m 57s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 10m 54s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 19m 52s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 13m 19s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 21m 28s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 14m 45s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 22m 40s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirebaseTest_testGetLogForUser_NewUser - 2018.11.14 at 01h 17m 31s.xml">
-      <configuration name="FirebaseTest.testGetLogForUser_NewUser" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testAddTask - 2018.11.14 at 09h 23m 38s.xml">
+      <configuration name="ThreadsTest.testAddTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadsTest - 2018.11.14 at 01h 18m 24s.xml">
-      <configuration name="ThreadsTest" configurationId="JUnit" />
+    <history-entry file="ThreadsTest_testGetTasks - 2018.11.14 at 09h 37m 15s.xml">
+      <configuration name="ThreadsTest.testGetTasks" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -830,7 +834,7 @@
     <frame x="0" y="25" width="1920" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.13713981" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495283" visible="true" weight="0.14034152" />
       <window_info id="Structure" order="1" sideWeight="0.504717" side_tool="true" weight="0.10832444" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -839,7 +843,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1391863" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.29073858" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.29073858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3985932" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -936,24 +940,13 @@
     <MESSAGE value="Добавлен телеграмм бот" />
     <MESSAGE value="Добавлена команда с праздниками" />
     <MESSAGE value="Добавлена облачная база данных" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена облачная база данных" />
+    <MESSAGE value="Доработана многопоточность и добавлены тесты(многопоточность, БД)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработана многопоточность и добавлены тесты(многопоточность, БД)" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Firebase/Firebase.java</url>
           <line>76</line>
@@ -1047,9 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,16 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Commands/DateWorkerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="964">
@@ -1083,13 +1063,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="128" column="73" selection-start-line="128" selection-start-column="73" selection-end-line="128" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1121,34 +1094,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bot/TelegramBotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetHolidays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1166,66 +1115,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/concurrent/ConcurrentHashMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-101">
           <caret line="352" column="13" selection-start-line="352" selection-start-column="13" selection-end-line="352" selection-end-column="19" />
-          <folding>
-            <element signature="e#13375#13376#0" expanded="true" />
-            <element signature="e#13447#13448#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="73" column="80" selection-start-line="73" selection-start-column="80" selection-end-line="73" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CheckTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="12" selection-start-line="12" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1243,10 +1136,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/BotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" selection-start-line="12" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Firebase/Firebase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="798">
           <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/DateWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bot/TelegramBotTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTaskGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1255,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Firebase/FirebaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="287">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1263,13 +1197,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/AddTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="128" column="73" selection-start-line="128" selection-start-column="73" selection-end-line="128" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CheckTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/GetTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Commands/RemoveTasksTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/RemoveTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/bot/ThreadsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="382">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2951#3329#0" expanded="true" />
+            <element signature="e#3328#3329#0" expanded="true" />
+            <element signature="e#3433#3811#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
+            <element signature="e#4614#4766#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/AddTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/TransferTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>

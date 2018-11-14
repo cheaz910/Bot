@@ -1,5 +1,6 @@
 package bot;
 
+import Commands.AddTaskGroup;
 import Commands.CheckTask;
 import Commands.GetTasks;
 import Commands.RemoveTasks;
@@ -13,6 +14,7 @@ import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ThreadsTest {
 
@@ -71,6 +73,49 @@ public class ThreadsTest {
                     RemoveTasks.removeOneTask("13:40-02.09.2018", tasks, new PrintStream(outContent));
                     RemoveTasks.removeOneTask("13:45-02.09.2018", tasks, new PrintStream(outContent));
                 }};
+            Thread thread3 = new Thread() {
+                public void run() {
+                    RemoveTasks.removeOneTask("13:40-02.09.2018", tasks, new PrintStream(outContent));
+                    RemoveTasks.removeOneTask("13:40-02.09.2018", tasks, new PrintStream(outContent));
+                    RemoveTasks.removeOneTask("13:45-02.09.2018", tasks, new PrintStream(outContent));
+                }};
+            thread1.start();
+            thread2.start();
+            thread3.start();
+
+            try {
+                thread1.join();
+                thread2.join();
+                thread3.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            assertEquals(5, tasks.size());
+        }
+    }
+
+    @Test
+    public final void testAddTask() {
+        for (Integer i = 0; i < 10000; i++) {
+            final ByteArrayOutputStream outputFirstUser = new ByteArrayOutputStream();
+            final ByteArrayOutputStream outputSecondUser = new ByteArrayOutputStream();
+            final ConcurrentHashMap<String, ConcurrentHashMap<String, Log>> logAllUsers = new ConcurrentHashMap<>();
+            logAllUsers.put("user1", new ConcurrentHashMap<String, Log>());
+            logAllUsers.put("user2", new ConcurrentHashMap<String, Log>());
+            logAllUsers.put("user3", new ConcurrentHashMap<String, Log>());
+            final ArrayList<ArrayList<Log>> gotTasks = new ArrayList<>();
+            Thread thread1 = new Thread() {
+                public void run() {
+                    AddTaskGroup.doCommand("событие1 13:44-02.09.2018 01:30 user3", "user1",
+                            logAllUsers,
+                            new PrintStream(outputFirstUser));
+                }};
+            Thread thread2 = new Thread() {
+                public void run() {
+                    AddTaskGroup.doCommand("событие2 13:44-02.09.2018 01:30 user3", "user2",
+                            logAllUsers,
+                            new PrintStream(outputSecondUser));
+                }};
 
             thread1.start();
             thread2.start();
@@ -81,7 +126,12 @@ public class ThreadsTest {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            assertEquals(5, tasks.size());
+            Log log = logAllUsers.get("user3").get("13:44-02.09.2018");
+            Boolean result = (log.task.equals("событие1") || log.task.equals("событие2"));
+            assertTrue(result);
+            Boolean resultFirstUser = outputFirstUser.toString().endsWith("На это время уже запланировано событие\n");
+            Boolean resultSecondUser = outputSecondUser.toString().endsWith("На это время уже запланировано событие\n");
+            assertTrue(""+resultFirstUser + " " + resultSecondUser, (resultFirstUser || resultSecondUser) && (!(resultFirstUser && resultSecondUser)));
         }
     }
 }

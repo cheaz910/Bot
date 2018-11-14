@@ -37,12 +37,12 @@ public class TransferTask {
         boolean check = task.check;
         Date endDate = DateWorker.recalculateEndDate(oldDate, task.endDate, newDate);
         Log newLog = new Log(task.task, newDate, endDate, check);
-        if (DateWorker.isConflict(tasks, newLog)) {
-            outputStream.println("На это время уже запланировано событие");
-            return;
-        }
-        tasks.remove(strOldDate);
-        while (!tasks.containsKey(strNewDate)) {
+        synchronized (tasks) {
+            if (DateWorker.isConflict(tasks, newLog)) {
+                outputStream.println("На это время уже запланировано событие");
+                return;
+            }
+            tasks.remove(strOldDate);
             tasks.put(strNewDate, newLog);
         }
         outputStream.println("Событие перенесено");
