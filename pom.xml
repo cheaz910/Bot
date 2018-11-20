@@ -55,6 +55,11 @@
             <version>6.5.0</version>
         </dependency>
         <dependency>
+            <groupId>org.junit.contrib</groupId>
+            <artifactId>junit-theories</artifactId>
+            <version>5.0-alpha-3</version>
+        </dependency>
+        <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
             <version>4.1</version>
